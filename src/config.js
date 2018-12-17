@@ -1,9 +1,9 @@
 const dev = {
-  getNicBlogPostsURL: "https://o9n2e948d3.execute-api.us-east-1.amazonaws.com/dev/blogPostsForUser/us-east-1:5619e966-5222-4f41-bfce-b3296d57b59d"
+  getNicBlogPostsURL: "https://o9n2e948d3.execute-api.us-east-1.amazonaws.com/dev/blogPostsForUser/us-east-1:37ed68d2-594a-43b0-8e54-d91546fdbb70"
 };
 
 const prod = {
-  getNicBlogPostsURL: "https://me3t2amdo0.execute-api.us-east-1.amazonaws.com/prod/blogPostsForUser/us-east-1:22a88420-f710-49f6-b205-e76ef4ddf3ff"
+  getNicBlogPostsURL: "https://me3t2amdo0.execute-api.us-east-1.amazonaws.com/prod/blogPostsForUser/us-east-1:c0655045-37e1-479e-afc7-da0e3d063a6e"
 };
 
 // Default to dev if not set

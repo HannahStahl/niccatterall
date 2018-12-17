@@ -11,7 +11,6 @@ class App extends Component {
         // TODO initialize state in constructor, then update it here; reference the state in the div of the site
       }
     };
-    // TODO change URL to use Nic's userId once you create his user
     req.open("GET", config.getNicBlogPostsURL, true);
     req.send();
   }
