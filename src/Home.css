@@ -1,0 +1,7 @@
+.home {
+  background-image: url("golfcourse.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* Uncomment for simple parallax: */
+  /* background-attachment: fixed; */
+}

@@ -1,0 +1,26 @@
+.navbar {
+  background: transparent;
+  border: none;
+  color: white !important;
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.navbar .container {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+.navbar a {
+  color: white !important;
+}
+
+.navbar-toggle, .collapsed {
+  float: left;
+  margin-left: 10px;
+}
+
+.navbar-collapse {
+  text-align: left;
+  border: none;
+}
