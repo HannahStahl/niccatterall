@@ -24,3 +24,19 @@
   text-align: left;
   border: none;
 }
+
+.social-icons {
+  position: fixed;
+  top: 10px;
+  right: 25px;
+}
+
+@media (max-width : 767px) {
+  .social-icons {
+    right: 10px;
+  }
+}
+
+.social-icons a {
+  margin-left: 14px;
+}
