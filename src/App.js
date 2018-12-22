@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import ScrollableAnchor from 'react-scrollable-anchor';
+import Waypoint from 'react-waypoint';
 import Header from './Header';
 import Home from './Home';
 import Golf from './Golf';
@@ -10,6 +11,13 @@ import config from './config.js';
 import './App.css';
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      activeSection: "home"
+    };
+  }
+
   getBlogPosts() {
     var req = new XMLHttpRequest();
     req.onreadystatechange = function() {
@@ -26,31 +34,41 @@ class App extends Component {
     this.getBlogPosts();
     return (
       <div className="App">
-        <Header />
+        <Header {...this.state} />
         <ScrollableAnchor id="home">
-          <div className="home section">
-            <Home />
-          </div>
+          <Waypoint onEnter={(data => this.setState({ activeSection: "home" }))}>
+            <div className="home section">
+              <Home />
+            </div>
+          </Waypoint>    
         </ScrollableAnchor>
         <ScrollableAnchor id="golf">
-          <div className="golf section">
-            <Golf />
-          </div>
+          <Waypoint onEnter={(data => this.setState({ activeSection: "golf" }))}>
+            <div className="golf section">
+              <Golf />
+            </div>
+          </Waypoint> 
         </ScrollableAnchor>
         <ScrollableAnchor id="resume">
-          <div className="resume section">
-            <Resume />
-          </div>
+          <Waypoint onEnter={(data => this.setState({ activeSection: "resume" }))}>
+            <div className="resume section">
+              <Resume />
+            </div>
+          </Waypoint> 
         </ScrollableAnchor>
         <ScrollableAnchor id="social">
-          <div className="social section">
-            <Social />
-          </div>
+          <Waypoint onEnter={(data => this.setState({ activeSection: "social" }))}>
+            <div className="social section">
+              <Social />
+            </div>
+          </Waypoint> 
         </ScrollableAnchor>
         <ScrollableAnchor id="blog">
-          <div className="blog section">
-            <Blog />
-          </div>
+          <Waypoint onEnter={(data => this.setState({ activeSection: "blog" }))}>
+            <div className="blog section">
+              <Blog />
+            </div>
+          </Waypoint> 
         </ScrollableAnchor>
       </div>
     );
