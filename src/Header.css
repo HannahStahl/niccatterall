@@ -40,6 +40,15 @@
   border: none;
 }
 
+.navbar-default .navbar-toggle {
+  border-color: white !important;
+  background-color: transparent !important;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: white;
+}
+
 .social-icons {
   position: fixed;
   top: 10px;
