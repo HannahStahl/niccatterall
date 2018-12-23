@@ -18,7 +18,11 @@
 
 .navbar li:active {
   background-color: transparent;
-  font-weight: bold;
+}
+
+.navbar li:hover {
+  transform: translate(0%, -10%);
+  transition: all .2s;
 }
 
 .navbar li.active a {
