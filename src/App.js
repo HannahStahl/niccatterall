@@ -36,35 +36,35 @@ class App extends Component {
       <div className="App">
         <Header {...this.state} />
         <ScrollableAnchor id="home">
-          <Waypoint onEnter={(data => this.setState({ activeSection: "home" }))}>
+          <Waypoint onEnter={(data => this.setState({ activeSection: "home" }))} topOffset="50%">
             <div className="home section">
               <Home />
             </div>
           </Waypoint>    
         </ScrollableAnchor>
         <ScrollableAnchor id="golf">
-          <Waypoint onEnter={(data => this.setState({ activeSection: "golf" }))}>
+          <Waypoint onEnter={(data => this.setState({ activeSection: "golf" }))} topOffset="50%">
             <div className="golf section">
               <Golf />
             </div>
           </Waypoint> 
         </ScrollableAnchor>
         <ScrollableAnchor id="resume">
-          <Waypoint onEnter={(data => this.setState({ activeSection: "resume" }))}>
+          <Waypoint onEnter={(data => this.setState({ activeSection: "resume" }))} topOffset="50%">
             <div className="resume section">
               <Resume />
             </div>
           </Waypoint> 
         </ScrollableAnchor>
         <ScrollableAnchor id="social">
-          <Waypoint onEnter={(data => this.setState({ activeSection: "social" }))}>
+          <Waypoint onEnter={(data => this.setState({ activeSection: "social" }))} topOffset="50%">
             <div className="social section">
               <Social />
             </div>
           </Waypoint> 
         </ScrollableAnchor>
         <ScrollableAnchor id="blog">
-          <Waypoint onEnter={(data => this.setState({ activeSection: "blog" }))}>
+          <Waypoint onEnter={(data => this.setState({ activeSection: "blog" }))} topOffset="50%">
             <div className="blog section">
               <Blog />
             </div>

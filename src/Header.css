@@ -16,6 +16,16 @@
   color: white !important;
 }
 
+.navbar li:active {
+  background-color: transparent;
+  font-weight: bold;
+}
+
+.navbar li.active a {
+  background-color: transparent !important;
+  font-weight: bold;
+}
+
 .navbar-toggle, .collapsed {
   float: left;
   margin-left: 10px;

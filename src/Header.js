@@ -13,19 +13,39 @@ class Header extends Component {
           </Navbar.Header>
           <Navbar.Collapse>
             <Nav>
-              <NavItem eventKey={1} href="/#home" className={this.props.activeSection === "home" ? "active" : ""}>
+              <NavItem
+                eventKey={1}
+                href="/#home"
+                className={this.props.activeSection === "home" ? "active" : ""}
+              >
                 Home
               </NavItem>
-              <NavItem eventKey={2} href="/#golf" className={this.props.activeSection === "golf" ? "active" : ""}>
+              <NavItem
+                eventKey={2}
+                href="/#golf"
+                className={this.props.activeSection === "golf" ? "active" : ""}
+              >
                 Golf
               </NavItem>
-              <NavItem eventKey={3} href="/#resume" className={this.props.activeSection === "resume" ? "active" : ""}>
+              <NavItem
+                eventKey={3}
+                href="/#resume"
+                className={this.props.activeSection === "resume" ? "active" : ""}
+              >
                 Resume
               </NavItem>
-              <NavItem eventKey={4} href="/#social" className={this.props.activeSection === "social" ? "active" : ""}>
+              <NavItem
+                eventKey={4}
+                href="/#social"
+                className={this.props.activeSection === "social" ? "active" : ""}
+              >
                 Social
               </NavItem>
-              <NavItem eventKey={5} href="/#blog" className={this.props.activeSection === "blog" ? "active" : ""}>
+              <NavItem
+                eventKey={5}
+                href="/#blog"
+                className={this.props.activeSection === "blog" ? "active" : ""}
+              >
                 Blog
               </NavItem>
             </Nav>
