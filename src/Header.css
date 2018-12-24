@@ -59,6 +59,10 @@
   .social-icons {
     right: 10px;
   }
+
+  .navbar-collapse, .collapse, .in {
+    background-color: rgba(0,0,0,0.4);
+  }
 }
 
 .social-icons a {

@@ -1,7 +1,18 @@
 .home {
-  background-image: url("golfcourse.jpg");
+  background: linear-gradient(
+    rgba(0, 0, 0, 0.5), 
+    rgba(0, 0, 0, 0.5)
+  ), url("golfcourse.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  justify-content: initial;
+  padding-top: 150px;
   /* Uncomment for simple parallax: */
   /* background-attachment: fixed; */
+}
+
+.mission-statement {
+  margin-top: 30px;
+  max-width: 400px;
+  line-height: 1.5;
 }
