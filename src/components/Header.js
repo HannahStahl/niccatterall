@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Navbar, Nav, NavItem } from 'react-bootstrap';
-import './App.css';
-import './Header.css';
+import '../styles/App.css'; // Do we need this here?
+import '../styles/Header.css';
 
 class Header extends Component {
   render() {

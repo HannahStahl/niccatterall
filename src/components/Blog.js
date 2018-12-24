@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
-import './Resume.css';
+import '../styles/Blog.css';
  
-class Resume extends Component {
+class Blog extends Component {
   render() {
     return (
       <div>
-        Resume
+        Blog
       </div>
     );
   }
 }
  
-export default Resume;
+export default Blog;

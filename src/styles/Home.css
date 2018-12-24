@@ -2,7 +2,7 @@
   background: linear-gradient(
     rgba(0, 0, 0, 0.5), 
     rgba(0, 0, 0, 0.5)
-  ), url("home.jpg");
+  ), url("../background-images/home.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   justify-content: initial;
@@ -20,4 +20,14 @@
   margin-top: 30px;
   max-width: 450px;
   line-height: 1.5;
+}
+
+@media (max-width : 767px) {
+  .home-header {
+    font-size: 40px;
+  }
+
+  .mission-statement {
+    font-size: 20px;
+  }
 }

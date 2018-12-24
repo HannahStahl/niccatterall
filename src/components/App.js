@@ -7,8 +7,8 @@ import Golf from './Golf';
 import Resume from './Resume';
 import Social from './Social';
 import Blog from './Blog';
-import config from './config.js';
-import './App.css';
+import config from '../config.js';
+import '../styles/App.css';
 
 class App extends Component {
   constructor(props) {

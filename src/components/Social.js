@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './Social.css';
+import '../styles/Social.css';
  
 class Social extends Component {
   render() {
