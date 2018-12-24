@@ -2,7 +2,7 @@
   background: linear-gradient(
     rgba(0, 0, 0, 0.5), 
     rgba(0, 0, 0, 0.5)
-  ), url("golfcourse.jpg");
+  ), url("home.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   justify-content: initial;
@@ -11,8 +11,13 @@
   /* background-attachment: fixed; */
 }
 
+.home-header {
+  font-size: 60px;
+}
+
 .mission-statement {
+  font-size: 24px;
   margin-top: 30px;
-  max-width: 400px;
+  max-width: 450px;
   line-height: 1.5;
 }

@@ -1,0 +1,17 @@
+.card {
+  width: 200px;
+  height: 225px;
+  border: 1px solid white;
+  background-color: rgba(198, 218, 112, 0.7);
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 30px;
+}
+
+@media (max-width : 767px) {
+  .card {
+    width: 100px;
+    height: 120px;
+    margin: 10px;
+  }
+}
