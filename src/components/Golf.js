@@ -24,7 +24,7 @@ class Golf extends Component {
             backgroundImage={require("../player-headshots/boo-weekley.png")}
           />
           <Card
-            athleteName="D.A. Points"
+            athleteName="D. A. Points"
             datesWithNic="" // get these from Nic
             backgroundImage={require("../player-headshots/da-points.png")}
           />
