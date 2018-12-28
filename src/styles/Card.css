@@ -11,15 +11,20 @@
 }
 
 .card {
-  background-color: rgba(203, 214, 153, 0.7);
+  background-color: rgba(148, 156, 109, 0.7);
   background-repeat: no-repeat;
   background-size: cover;
   border: 1px solid white;
 }
 
 .card-back {
+  background-color: rgba(76, 80, 57, 0.7);
   height: 247px;
-  padding: 10px;
+  padding: 20px;
+}
+
+.athlete-dates {
+  margin-top: 20px;
 }
 
 @media (max-width : 767px) {
@@ -31,5 +36,10 @@
 
   .card-back {
     height: 110px;
+    padding: 2px;
+  }
+
+  .athlete-dates {
+    margin-top: 8px;
   }
 }
