@@ -23,9 +23,13 @@
 }
 
 @media (max-width : 767px) {
-  .card {
+  .card-container {
     width: 90px;
     height: 112px;
     margin: 10px;
+  }
+
+  .card-back {
+    height: 110px;
   }
 }
