@@ -2,7 +2,7 @@
   width: 200px;
   height: 225px;
   border: 1px solid white;
-  background-color: rgba(198, 218, 112, 0.7);
+  background-color: rgba(203, 214, 153, 0.7);
   background-repeat: no-repeat;
   background-size: cover;
   margin: 30px;
@@ -10,8 +10,8 @@
 
 @media (max-width : 767px) {
   .card {
-    width: 120px;
-    height: 140px;
+    width: 90px;
+    height: 102px;
     margin: 10px;
   }
 }
