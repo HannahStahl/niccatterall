@@ -1,17 +1,31 @@
-.card {
+.card-container {
   width: 200px;
-  height: 225px;
-  border: 1px solid white;
+  height: 249px;
+  margin: 30px;
+  transition: all .2s;
+}
+
+.card-container:hover {
+  transform: translate(0%, -5%);
+  cursor: pointer;
+}
+
+.card {
   background-color: rgba(203, 214, 153, 0.7);
   background-repeat: no-repeat;
   background-size: cover;
-  margin: 30px;
+  border: 1px solid white;
+}
+
+.card-back {
+  height: 247px;
+  padding: 10px;
 }
 
 @media (max-width : 767px) {
   .card {
     width: 90px;
-    height: 102px;
+    height: 112px;
     margin: 10px;
   }
 }
