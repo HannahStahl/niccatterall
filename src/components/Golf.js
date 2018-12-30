@@ -6,7 +6,7 @@ class Golf extends Component {
   render() {
     return (
       <div>
-        <h1 className="golf-header">PGA Player Showcase</h1>
+        <h1>PGA Player Showcase</h1>
         <div className="players">
           <Card
             athleteName="Luke List"

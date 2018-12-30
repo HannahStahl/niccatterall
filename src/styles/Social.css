@@ -1,5 +1,5 @@
 .social {
-  background-color: black;
+  background-color: rgb(49, 49, 49);
 }
 
 .instagram-photos-container {
@@ -17,6 +17,13 @@
   width: 300px;
   border: solid white 1px;
   margin: 20px;
+}
+
+@media (min-width : 768px) {
+  .instagram-photo:hover {
+    filter: brightness(70%);
+    -webkit-filter: brightness(70%);
+  }
 }
 
 @media (max-width : 767px) {
