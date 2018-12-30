@@ -35,15 +35,25 @@ class Social extends Component {
           this.state.photos.length > 0 ?
           <div className="instagram-photos">
             { this.state.photos.map(photo =>
-              <img
+              <a
+                href={photo.link}
+                target="_blank"
+                rel="noopener noreferrer"
                 key={photo.id}
-                src={photo.images.standard_resolution.url}
+                style={{"backgroundImage":`url(${photo.images.standard_resolution.url})`}}
                 className="instagram-photo"
                 alt="Instagram"
-              />
-              // TODO use div with background instead of img
-              // div should have white text with icons and # of likes and comments
-              // this text should be hidden initially and only displayed on hover
+              >
+                <div className="likes">
+                  <img src="heart.svg" width="28px" alt="Likes" />
+                  <p>{photo.likes.count}</p>
+                </div>
+                <div className="comments">
+                  <p>{photo.comments.count}</p>
+                  <img src="speech-bubble.svg" width="28px" alt="Comments" />
+                </div>
+              </a>
+              // TODO white should stay white on hover
             ) }
           </div> : <div />
         }
