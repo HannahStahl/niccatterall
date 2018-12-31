@@ -1,0 +1,67 @@
+.instagram-photo {
+  width: 300px;
+  height: 300px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: solid white 1px;
+  margin: 20px;
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  font-size: 28px;
+}
+
+.instagram-photo:hover {
+  color: white;
+  text-decoration: none;
+}
+
+.instagram-photo:focus {
+  color: white;
+  text-decoration: none;
+}
+
+.likes {
+  float: left;
+  margin-left: 8px;
+  opacity: 0.8;
+}
+
+.instagram-photo:hover > .likes {
+  opacity: 1.0;
+}
+
+.likes p {
+  display: inline-block;
+  font-weight: 700;
+  margin-left: 5px;
+  font-size: 24px;
+}
+
+.comments {
+  float: right;
+  margin-right: 8px;
+  opacity: 0.8;
+}
+
+.instagram-photo:hover > .comments {
+  opacity: 1.0;
+}
+
+.comments p {
+  display: inline-block;
+  font-weight: 700;
+  margin-right: 5px;
+  font-size: 24px;
+}
+
+@media (max-width : 767px) {
+  .instagram-photo {
+    width: 200px;
+    height: 200px;
+  }
+
+  .instagram-photo p {
+    font-size: 20px;
+  }
+}

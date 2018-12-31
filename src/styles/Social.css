@@ -13,48 +13,6 @@
   width: 2380px;
 }
 
-.instagram-photo {
-  width: 300px;
-  height: 300px;
-  background-repeat: no-repeat;
-  background-size: cover;
-  border: solid white 1px;
-  margin: 20px;
-  display: inline-block;
-  color: white;
-  text-decoration: none;
-  font-size: 28px;
-}
-
-.likes {
-  float: left;
-  margin-left: 8px;
-}
-
-.likes p {
-  display: inline-block;
-  font-weight: 700;
-  margin-left: 5px;
-  font-size: 24px;
-}
-
-.comments {
-  float: right;
-  margin-right: 8px;
-}
-
-.comments p {
-  display: inline-block;
-  font-weight: 700;
-  margin-right: 5px;
-  font-size: 24px;
-}
-
-.instagram-photo:hover {
-  color: white;
-  text-decoration: none;
-}
-
 @media (max-width : 767px) {
   .instagram-photos-container {
     width: 750px;
@@ -64,14 +22,5 @@
 
   .instagram-photos {
     width: 1680px;
-  }
-
-  .instagram-photo {
-    width: 200px;
-    height: 200px;
-  }
-
-  .instagram-photo p {
-    font-size: 20px;
   }
 }
