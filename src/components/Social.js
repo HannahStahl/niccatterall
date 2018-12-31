@@ -28,7 +28,6 @@ class Social extends Component {
   }
 
   render() {
-    console.log(this.state.photos);
     return (
       <div className="instagram-photos-container">
         {
@@ -40,7 +39,12 @@ class Social extends Component {
                 target="_blank"
                 rel="noopener noreferrer"
                 key={photo.id}
-                style={{"backgroundImage":`url(${photo.images.standard_resolution.url})`}}
+                style={{
+                  "backgroundImage": `linear-gradient(
+                    rgba(49, 49, 49, 0.1), 
+                    rgba(49, 49, 49, 0.1)
+                  ), url(${photo.images.standard_resolution.url})`
+                }}
                 className="instagram-photo"
                 alt="Instagram"
               >
@@ -54,6 +58,10 @@ class Social extends Component {
                 </div>
               </a>
               // TODO white should stay white on hover
+              // could do this by extracting each photo into separate component
+              // (which is probably worth doing anyway at this point for code cleanliness)
+              // each of these components will have its own state
+              // so then you could use onmouseenter hover state solution
             ) }
           </div> : <div />
         }

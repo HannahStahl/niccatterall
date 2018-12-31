@@ -12,7 +12,6 @@ const config = process.env.REACT_APP_STAGE === 'prod'
   : dev;
 
 export default {
-  // TODO change this to Nic's user ID and access token once he authorizes you
-  getNicInstagramURL: "https://api.instagram.com/v1/users/9436320028/media/recent?access_token=9436320028.176a171.f35c30549495489b8a469d27d1dd223f&count=12",
+  getNicInstagramURL: "https://api.instagram.com/v1/users/3041604645/media/recent?access_token=3041604645.3ae8b40.e9bee353b7c54e1080abcab4fdbaf46c&count=7",
   ...config
 };
