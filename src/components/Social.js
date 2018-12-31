@@ -30,15 +30,18 @@ class Social extends Component {
 
   render() {
     return (
-      <div className="instagram-photos-container">
-        {
-          this.state.photos.length > 0 ?
-          <div className="instagram-photos">
-            { this.state.photos.map(photo =>
-              <Photo key={photo.id} photo={photo} />
-            ) }
-          </div> : <div />
-        }
+      <div className="social-feed">
+        <h1>@cattogolf on Instagram</h1>
+        <div className="instagram-photos-container">
+          {
+            this.state.photos.length > 0 ?
+            <div className="instagram-photos">
+              { this.state.photos.map(photo =>
+                <Photo key={photo.id} photo={photo} />
+              ) }
+            </div> : <div />
+          }
+        </div>
       </div>
     );
   }
