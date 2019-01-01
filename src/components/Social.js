@@ -24,6 +24,14 @@ class Social extends Component {
     req.send();
   }
 
+  scrollLeft() {
+    document.getElementById('scroller').scrollLeft -= 150;
+  }
+
+  scrollRight() {
+    document.getElementById('scroller').scrollLeft += 150;
+  }
+
   componentWillMount() {
     this.getInstagramPhotos();
   }
@@ -32,15 +40,23 @@ class Social extends Component {
     return (
       <div className="social-feed">
         <h1>@cattogolf on Instagram</h1>
-        <div className="instagram-photos-container">
-          {
-            this.state.photos.length > 0 ?
-            <div className="instagram-photos">
-              { this.state.photos.map(photo =>
-                <Photo key={photo.id} photo={photo} />
-              ) }
-            </div> : <div />
-          }
+        <div className="instagram-container">
+          <div className="arrow left-arrow" onClick={this.scrollLeft}>
+            <img src="left-arrow.svg" width="60px" alt="Left" />
+          </div>
+          <div id="scroller" className="instagram-photos-container">
+            {
+              this.state.photos.length > 0 ?
+              <div className="instagram-photos">
+                { this.state.photos.map(photo =>
+                  <Photo key={photo.id} photo={photo} />
+                ) }
+              </div> : <div />
+            }
+          </div>
+          <div className="arrow right-arrow" onClick={this.scrollRight}>
+            <img src="right-arrow.svg" width="60px" alt="Right" />
+          </div>
         </div>
       </div>
     );
