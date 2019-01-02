@@ -1,14 +1,25 @@
 .home {
   background: linear-gradient(
-    rgba(0, 0, 0, 0.5), 
-    rgba(0, 0, 0, 0.5)
+    to right,
+    rgba(0, 0, 0, 0.9),
+    rgba(0, 0, 0, 0.8),
+    rgba(0, 0, 0, 0.8),
+    rgba(0, 0, 0, 0.7),
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.1)
   ), url("../background-images/home.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   justify-content: initial;
-  padding-top: 130px;
+  align-items: flex-start;
+  padding-top: 10%;
   /* Uncomment for simple parallax: */
   /* background-attachment: fixed; */
+}
+
+.home-text {
+  width: 80%;
+  padding-left: 0%;
 }
 
 .home-header {
@@ -18,7 +29,8 @@
 .mission-statement {
   font-size: 24px;
   margin-top: 50px;
-  max-width: 450px;
+  width: 60%;
+  /* max-width: 450px; */
   line-height: 1.5;
   margin-left: auto;
   margin-right: auto;

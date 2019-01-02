@@ -24,7 +24,7 @@
 }
 
 .instagram-photos {
-  width: 2340px;
+  width: 2340px; /* TODO make this 300ish*(number of photos) then remove count from API call*/
 }
 
 .instagram-photos a:first-child {
