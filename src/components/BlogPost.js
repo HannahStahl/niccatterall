@@ -10,8 +10,18 @@ class BlogPost extends Component {
   render() {
     return (
       <div className="blog-post">
-        {/* <img className="blog-post-image" src={this.props.blogPost.imageURL} width="300px" height="200px" alt="Blog" /> */}
+        <img
+          className="blog-post-image"
+          width="300px"
+          height="200px"
+          src={require("./temp-photo.jpg")}
+          alt="Blog Post"
+        />
         <h4>{this.props.blogPost.title}</h4>
+        <div
+          dangerouslySetInnerHTML={{ __html: this.props.blogPost.content }}
+          className="blog-post-preview"
+        />
       </div>
     );
   }
