@@ -7,7 +7,6 @@ import Golf from './Golf';
 import Resume from './Resume';
 import Social from './Social';
 import Blog from './Blog';
-import config from '../config.js';
 import '../styles/App.css';
 
 class App extends Component {
@@ -18,20 +17,7 @@ class App extends Component {
     };
   }
 
-  getBlogPosts() {
-    var req = new XMLHttpRequest();
-    req.onreadystatechange = function() {
-      if (this.readyState === 4 && this.status === 200) {
-        console.log(this.responseText);
-        // TODO initialize state in constructor, then update it here; reference the state in the div of the site
-      }
-    };
-    req.open("GET", config.getNicBlogPostsURL, true);
-    req.send();
-  }
-
   render() {
-    this.getBlogPosts();
     return (
       <div className="App">
         <Header {...this.state} />

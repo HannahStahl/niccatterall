@@ -1,0 +1,10 @@
+.blog-post {
+  width: 300px;
+  height: 300px;
+  border: solid white 1px;
+  margin: 20px;
+}
+
+.blog-post-image {
+  border: none;
+}

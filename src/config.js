@@ -1,5 +1,7 @@
 const dev = {
-  getNicBlogPostsURL: "https://o9n2e948d3.execute-api.us-east-1.amazonaws.com/dev/blogPostsForUser/us-east-1:37ed68d2-594a-43b0-8e54-d91546fdbb70"
+  // will need to change this to Nic's once you remake his user
+  // on the new stack (get stack working first though)
+  getNicBlogPostsURL: "https://uxu37jfgnb.execute-api.us-east-1.amazonaws.com/dev/blogPostsForUser/us-east-1:af0bfaac-af4d-431b-8725-becc83c0fe4c"
 };
 
 const prod = {
