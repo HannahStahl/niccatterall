@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import ScrollableAnchor from 'react-scrollable-anchor';
 import Waypoint from 'react-waypoint';
 import Header from './Header';
+import Footer from './Footer';
 import Home from './Home';
 import Golf from './Golf';
 import Resume from './Resume';
@@ -56,6 +57,7 @@ class App extends Component {
             </div>
           </Waypoint> 
         </ScrollableAnchor>
+        <Footer />
       </div>
     );
   }
