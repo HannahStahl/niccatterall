@@ -1,5 +1,14 @@
 .footer {
   font-size: 18px;
-  padding-top: 50px;
+  padding-top: 10px;
   padding-bottom: 50px;
+}
+
+.copyright {
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+.copyright a {
+  color: white;
 }

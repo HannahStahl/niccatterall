@@ -31,7 +31,7 @@ class Blog extends Component {
   render() {
     return (
       <div>
-        <h1>Project Strong Bear</h1>
+        <h1 className="blog-header">Project Strong Bear</h1>
         <p className="blog-description">
           Insert description here. 
           Insert description here. 

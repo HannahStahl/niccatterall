@@ -5,6 +5,7 @@ class Affiliate extends Component {
   render() {
     return (
       <a
+        className="affiliate"
         href={this.props.url}
         target="_blank"
         rel="noopener noreferrer"

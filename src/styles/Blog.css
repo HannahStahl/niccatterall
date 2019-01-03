@@ -1,4 +1,9 @@
+.blog-header {
+  margin-top: 50px;
+}
+
 .blog-description {
+  width: 80%;
   max-width: 550px;
   margin-left: auto;
   margin-right: auto;
