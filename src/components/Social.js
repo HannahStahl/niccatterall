@@ -42,7 +42,7 @@ class Social extends Component {
         <h1>@cattogolf on Instagram</h1>
         <div className="instagram-container">
           <div className="arrow left-arrow" onClick={this.scrollLeft}>
-            <img src="left-arrow.svg" width="60px" alt="Left" />
+            <img src={require("../social-icons/left-arrow.svg")} width="60px" alt="Left" />
           </div>
           <div id="scroller" className="instagram-photos-container">
             {
@@ -55,7 +55,7 @@ class Social extends Component {
             }
           </div>
           <div className="arrow right-arrow" onClick={this.scrollRight}>
-            <img src="right-arrow.svg" width="60px" alt="Right" />
+            <img src={require("../social-icons/right-arrow.svg")} width="60px" alt="Right" />
           </div>
         </div>
       </div>

@@ -53,13 +53,13 @@ class Header extends Component {
         </Navbar>
         <div className="social-icons">
           <a href="https://www.instagram.com/cattogolf/" target="_blank" rel="noopener noreferrer">
-            <img src="instagram.svg" width="28px" alt="Instagram" />
+            <img src={require("../social-icons/instagram.svg")} width="28px" alt="Instagram" />
           </a>
           <a href="https://www.facebook.com/nic.catterall.9" target="_blank" rel="noopener noreferrer">
-            <img src="facebook.svg" width="28px" alt="Facebook" />
+            <img src={require("../social-icons/facebook.svg")} width="28px" alt="Facebook" />
           </a>
           <a href="https://www.linkedin.com/in/nic-catterall-08914235" target="_blank" rel="noopener noreferrer">
-            <img src="linkedin.svg" width="28px" alt="LinkedIn" />
+            <img src={require("../social-icons/linkedin.svg")} width="28px" alt="LinkedIn" />
           </a>
         </div>
       </div>
