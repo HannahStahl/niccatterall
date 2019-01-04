@@ -7,6 +7,14 @@
   cursor: pointer;
 }
 
+.blog-post:hover > * {
+  font-weight: bold;
+}
+
+.blog-post:hover > img {
+  opacity: 0.7;
+}
+
 .blog-post-image {
   border: solid white 1px;
 }
