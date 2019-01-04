@@ -40,6 +40,34 @@
   font-weight: 300;
 }
 
+.modal-dialog {
+  margin: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+}
+
+.modal-header {
+  border-bottom: none;
+}
+
+.modal-title {
+  font-weight: bold;
+}
+
+.modal-title img {
+  margin-top: 20px;
+  border: solid rgb(25, 25, 25) 1px;
+  min-width: 230px;
+}
+
+.modal-content {
+  border: solid black 1px;
+  padding: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
 @media (max-width : 767px) {
   .blog-post-preview * {
     font-size: 14px;
