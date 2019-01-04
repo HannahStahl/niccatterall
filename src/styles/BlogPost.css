@@ -21,6 +21,10 @@
   text-align: left;
   height: 90px;
   overflow: hidden;
+  background-image: linear-gradient(white, rgb(32, 32, 32));
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
 }
 
 .blog-post-preview * {
