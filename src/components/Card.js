@@ -36,7 +36,7 @@ class Card extends Component {
             className="card card-back"
             onClick={this.handleClick}
           >
-            <h4>{this.props.athleteName.toUpperCase()}</h4>
+            <h2>{this.props.athleteName.toUpperCase()}</h2>
             <p className="athlete-dates">Trained by Nic {this.props.datesWithNic}</p>
           </div>
         </ReactCardFlip>

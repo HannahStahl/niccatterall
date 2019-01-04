@@ -25,6 +25,27 @@ class BlogPost extends Component {
     });
   }
 
+  parseDate(date) {
+    var dateMinusTime = date.split(',')[0];
+    var [monthNumber, day, year]  = dateMinusTime.split('/');
+    var months = [
+      'January',
+      'February',
+      'March',
+      'April',
+      'May',
+      'June',
+      'July',
+      'August',
+      'September',
+      'October',
+      'November',
+      'December'
+    ];
+    var month = months[monthNumber-1];
+    return month + ' ' + day + ', ' + year;
+  }
+
   // async componentDidMount() {
   //   this.props.blogPost.imageURL = await Storage.vault.get(this.props.blogPost.image);
   // }
@@ -39,16 +60,16 @@ class BlogPost extends Component {
         >
           <Modal.Header closeButton>
             <Modal.Title>
-              {this.props.blogPost.title}
-              {/* <br />
-              {this.props.blogPost.publishedDate.split(',')[0]} */}
-              <br />
               <img
-                width="70%"
+                width="80%"
                 height="auto"
                 src={require("./temp-photo.jpg")}
                 alt="Blog Post"
               />
+              <br />
+              {this.props.blogPost.title}
+              <br />
+              <p>{this.parseDate(this.props.blogPost.publishedDate)}</p>
             </Modal.Title>
           </Modal.Header>
           <Modal.Body>
@@ -57,18 +78,20 @@ class BlogPost extends Component {
             />
           </Modal.Body>
         </Modal>
-        <div className="blog-post" onClick={this.handleShowModal}>
+        <div className="blog-post-preview" onClick={this.handleShowModal}>
           <img
-            className="blog-post-image"
             width="300px"
             height="200px"
             src={require("./temp-photo.jpg")}
             alt="Blog Post"
           />
-          <h4>{this.props.blogPost.title}</h4>
+          <h2>{this.props.blogPost.title}</h2>
+          <p className="blog-post-preview-date">
+            {this.parseDate(this.props.blogPost.publishedDate)}
+          </p>
           <div
             dangerouslySetInnerHTML={{ __html: this.props.blogPost.content }}
-            className="blog-post-preview"
+            className="blog-post-preview-content"
           />
         </div>
       </div>
