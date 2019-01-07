@@ -39,6 +39,10 @@
     margin-left: 0px;
   }
 
+  .resume-card {
+    height: 160px;
+  }
+
   .resume-card-back {
     height: 160px;
   }
