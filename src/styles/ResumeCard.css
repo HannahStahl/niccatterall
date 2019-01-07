@@ -22,6 +22,12 @@
   height: 247px;
 }
 
+.resume-card img {
+  height: 170px;
+  width: auto;
+  max-width: 170px;
+}
+
 .resume-card-back {
   background-color: white;
   border: solid white 1px;
@@ -41,6 +47,12 @@
 
   .resume-card {
     height: 160px;
+  }
+
+  .resume-card img {
+    height: 90px;
+    width: auto;
+    max-width: 90px;
   }
 
   .resume-card-back {
