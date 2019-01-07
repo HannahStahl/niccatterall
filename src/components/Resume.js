@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ResumeCard from './ResumeCard';
 import '../styles/Resume.css';
  
 class Resume extends Component {
@@ -7,40 +8,53 @@ class Resume extends Component {
       <div>
         <div className="timeline">
           <div className="timeline-container left">
-            <div className="timeline-content">
-              <h2>2017</h2>
-              <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
-            </div>
+            <ResumeCard
+              eventName="Brisbane Roar"
+              eventDetails="Details go here"
+              backgroundImage={require("../resume-images/brisbane-roar.png")}
+              resumeCardContainerClass="left-resume-card-container"
+            />
           </div>
           <div className="timeline-container right">
-            <div className="timeline-content">
-              <h2>2016</h2>
-              <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
-            </div>
+            <ResumeCard
+              eventName="Brisbane Lions"
+              eventDetails="Details go here"
+              backgroundImage={require("../resume-images/brisbane-lions.png")}
+              resumeCardContainerClass="right-resume-card-container"
+            />
           </div>
           <div className="timeline-container left">
-            <div className="timeline-content">
-              <h2>2015</h2>
-              <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
-            </div>
+            {/* TODO Replace with Health and Fitness Australia once you get that image */}
+            <ResumeCard
+              eventName="Brisbane Roar"
+              eventDetails="Details go here"
+              backgroundImage={require("../resume-images/brisbane-roar.png")}
+              resumeCardContainerClass="left-resume-card-container"
+            />
           </div>
           <div className="timeline-container right">
-            <div className="timeline-content">
-              <h2>2012</h2>
-              <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
-            </div>
+            <ResumeCard
+              eventName="Cricket Australia"
+              eventDetails="Details go here"
+              backgroundImage={require("../resume-images/cricket-australia.jpg")}
+              resumeCardContainerClass="right-resume-card-container"
+            />
           </div>
           <div className="timeline-container left">
-            <div className="timeline-content">
-              <h2>2011</h2>
-              <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
-            </div>
+            <ResumeCard
+              eventName="Sports Therapy Australia"
+              eventDetails="Details go here"
+              backgroundImage={require("../resume-images/sports-therapy-australia.jpeg")}
+              resumeCardContainerClass="left-resume-card-container"
+            />
           </div>
           <div className="timeline-container right">
-            <div className="timeline-content">
-              <h2>2007</h2>
-              <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
-            </div>
+            <ResumeCard
+              eventName="PGA Tour"
+              eventDetails="Details go here"
+              backgroundImage={require("../resume-images/pga-tour.png")}
+              resumeCardContainerClass="right-resume-card-container"
+            />
           </div>
         </div>
       </div>

@@ -1,0 +1,49 @@
+.resume-card-container {
+  width: 200px;
+  height: 249px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.left-resume-card-container {
+  margin-right: 0px;
+}
+
+.right-resume-card-container {
+  margin-left: 50px;
+}
+
+.resume-card {
+  background-color: white;
+  border: solid white 1px;
+  padding: 20px;
+  height: 247px;
+}
+
+.resume-card-back {
+  background-color: white;
+  border: solid white 1px;
+  height: 247px;
+  color: black;
+}
+
+@media (max-width : 767px) {
+  .resume-card-container {
+    width: 130px;
+    height: 160px;
+  }
+
+  .right-resume-card-container {
+    margin-left: 0px;
+  }
+
+  .resume-card-back {
+    height: 160px;
+  }
+
+  .left-resume-card-container {
+    margin-left: 0px;
+  }
+}
