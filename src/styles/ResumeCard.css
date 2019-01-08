@@ -33,6 +33,19 @@
   border: solid white 1px;
   height: 247px;
   color: black;
+  padding: 10px;
+  padding-left: 12px;
+  padding-right: 12px;
+  overflow: scroll
+}
+
+.resume-card-back h2 {
+  font-size: 22px;
+  margin-top: 5px;
+}
+
+.resume-card-back p {
+  font-size: 16px;
 }
 
 @media (max-width : 767px) {
@@ -57,6 +70,17 @@
 
   .resume-card-back {
     height: 160px;
+    padding: 5px;
+  }
+
+  .resume-card-back h2 {
+    font-size: 16px;
+    font-weight: 300;
+  }
+
+  .resume-card-back p {
+    font-size: 12px;
+    line-height: 1.0;
   }
 
   .left-resume-card-container {
