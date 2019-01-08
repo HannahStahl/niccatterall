@@ -19,59 +19,59 @@ class Resume extends Component {
           <p className="timeline-date date-right current">2015 - current</p>
           <div className="timeline-container right">
             <ResumeCard
-              eventName="Sports Therapy Australia"
-              eventDetails="Director and Musculoskeletal Therapist"
-              backgroundImage={require("../resume-images/sports-therapy-australia.jpeg")}
+              eventName="Edith Cowan University"
+              eventDetails="Master's degree in Exercise Science with specialty in Strength and Conditioning"
+              backgroundImage={require("../resume-images/edith-cowan-university.png")}
               resumeCardContainerClass="right-resume-card-container"
             />
           </div>
-          <p className="timeline-date date-left">2010 - 2015</p>
+          <p className="timeline-date date-left">2016 - 2019</p>
           <div className="timeline-container left">
+            <ResumeCard
+              eventName="Sports Therapy Australia"
+              eventDetails="Director and Musculoskeletal Therapist"
+              backgroundImage={require("../resume-images/sports-therapy-australia.jpeg")}
+              resumeCardContainerClass="left-resume-card-container"
+            />
+          </div>
+          <p className="timeline-date date-right">2010 - 2015</p>
+          <div className="timeline-container right">
             <ResumeCard
               eventName="Cricket Australia"
               eventDetails="Sports Therapist"
               backgroundImage={require("../resume-images/cricket-australia.jpg")}
-              resumeCardContainerClass="left-resume-card-container"
+              resumeCardContainerClass="right-resume-card-container"
             />
           </div>
-          <p className="timeline-date date-right">2011 - 2013</p>
-          <div className="timeline-container right">
+          <p className="timeline-date date-left">2011 - 2013</p>
+          <div className="timeline-container left">
             <ResumeCard
               eventName="Brisbane Lions"
               eventDetails="Assistant Therapist"
               backgroundImage={require("../resume-images/brisbane-lions.png")}
-              resumeCardContainerClass="right-resume-card-container"
+              resumeCardContainerClass="left-resume-card-container"
             />
           </div>
-          <p className="timeline-date date-left">2010 - 2013</p>
-          <div className="timeline-container left">
+          <p className="timeline-date date-right">2010 - 2013</p>
+          <div className="timeline-container right">
             {/* TODO Replace with Health and Fitness Australia once you get that image */}
             <ResumeCard
               eventName="Health and Fitness Australia"
               eventDetails="Co-Director and Trainer"
               backgroundImage={require("../resume-images/brisbane-roar.png")}
-              resumeCardContainerClass="left-resume-card-container"
+              resumeCardContainerClass="right-resume-card-container"
             />
           </div>
-          <p className="timeline-date date-right">2011 - 2012</p>
-          <div className="timeline-container right">
+          <p className="timeline-date date-left">2011 - 2012</p>
+          <div className="timeline-container left">
             <ResumeCard
               eventName="Brisbane Roar"
               eventDetails="Sports Therapist"
               backgroundImage={require("../resume-images/brisbane-roar.png")}
-              resumeCardContainerClass="right-resume-card-container"
-            />
-          </div>
-          <p className="timeline-date date-left">2010 - 2012</p>
-          <div className="timeline-container left">
-            <ResumeCard
-              eventName="Edith Cowan University"
-              eventDetails="Master's degree in Exercise Science with specialty in Strength and Conditioning"
-              backgroundImage={require("../resume-images/edith-cowan-university.png")}
               resumeCardContainerClass="left-resume-card-container"
             />
           </div>
-          <p className="timeline-date date-right">2016 - 2019</p>
+          <p className="timeline-date date-right">2010 - 2012</p>
           <div className="timeline-container right">
             <ResumeCard
               eventName="University of Queensland"
