@@ -1,6 +1,6 @@
 .resume-card-container {
-  width: 200px;
-  height: 249px;
+  width: 220px;
+  height: 220px;
   margin-left: auto;
   margin-right: auto;
   margin-top: 0px;
@@ -19,7 +19,7 @@
   background-color: white;
   border: solid white 1px;
   padding: 20px;
-  height: 247px;
+  height: 218px;
 }
 
 .resume-card img {
@@ -31,12 +31,9 @@
 .resume-card-back {
   background-color: white;
   border: solid white 1px;
-  height: 247px;
+  height: 218px;
   color: black;
-  padding: 10px;
-  padding-left: 12px;
-  padding-right: 12px;
-  overflow: scroll
+  padding: 15px;
 }
 
 .resume-card-back h2 {
@@ -50,8 +47,8 @@
 
 @media (max-width : 767px) {
   .resume-card-container {
-    width: 130px;
-    height: 160px;
+    width: 135px;
+    height: 135px;
   }
 
   .right-resume-card-container {
@@ -59,7 +56,7 @@
   }
 
   .resume-card {
-    height: 160px;
+    height: 133px;
   }
 
   .resume-card img {
@@ -69,8 +66,9 @@
   }
 
   .resume-card-back {
-    height: 160px;
+    height: 133px;
     padding: 5px;
+    overflow: auto;
   }
 
   .resume-card-back h2 {
