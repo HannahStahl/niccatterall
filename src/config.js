@@ -15,6 +15,16 @@ const dev = {
 };
 
 const prod = {
+  s3: {
+    REGION: "us-east-1",
+    BUCKET: "cms-backend-prod-attachmentsbucket-gskfdn3cqx2t"
+  },
+  cognito: {
+    REGION: "us-east-1",
+    USER_POOL_ID: "us-east-1_TxFV8deDA",
+    APP_CLIENT_ID: "4akk0238pvoiu6l0cqeb73cfvt",
+    IDENTITY_POOL_ID: "us-east-1:b3bf1039-a69d-40d7-a239-a59c53040e4e"
+  },
   getNicBlogPostsURL: "https://me3t2amdo0.execute-api.us-east-1.amazonaws.com/prod/blogPostsForUser/us-east-1:c0655045-37e1-479e-afc7-da0e3d063a6e"
 };
 

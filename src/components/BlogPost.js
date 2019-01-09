@@ -48,6 +48,7 @@ class BlogPost extends Component {
 
   async componentDidMount() {
     this.props.blogPost.imageURL = await Storage.vault.get(this.props.blogPost.image);
+    console.log(this.props.blogPost.imageURL);
   }
 
   render() {
