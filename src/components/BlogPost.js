@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-// import { Storage } from "aws-amplify";
+import { Storage } from "aws-amplify";
 import { Modal } from 'react-bootstrap';
 import '../styles/BlogPost.css';
 
@@ -46,9 +46,9 @@ class BlogPost extends Component {
     return month + ' ' + day + ', ' + year;
   }
 
-  // async componentDidMount() {
-  //   this.props.blogPost.imageURL = await Storage.vault.get(this.props.blogPost.image);
-  // }
+  async componentDidMount() {
+    this.props.blogPost.imageURL = await Storage.vault.get(this.props.blogPost.image);
+  }
 
   render() {
     return (
@@ -63,7 +63,7 @@ class BlogPost extends Component {
               <img
                 width="80%"
                 height="auto"
-                src={require("./temp-photo.jpg")}
+                src={this.props.blogPost.imageURL}
                 alt="Blog Post"
               />
               <br />
@@ -82,7 +82,7 @@ class BlogPost extends Component {
           <img
             width="300px"
             height="200px"
-            src={require("./temp-photo.jpg")}
+            src={this.props.blogPost.imageURL}
             alt="Blog Post"
           />
           <h2>{this.props.blogPost.title}</h2>
