@@ -18,7 +18,5 @@ const config = process.env.REACT_APP_STAGE === 'prod'
 
 export default {
   getNicInstagramURL: "https://api.instagram.com/v1/users/3041604645/media/recent?access_token=3041604645.3ae8b40.e9bee353b7c54e1080abcab4fdbaf46c&count=7",
-  awsAccessKeyID: "AKIAJKJM4SZVHUN3WKKA",
-  awsSecretAccessKey: "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",
   ...config
 };
