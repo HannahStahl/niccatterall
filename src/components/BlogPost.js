@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
-import { Storage } from "aws-amplify";
 import { Modal } from 'react-bootstrap';
 import '../styles/BlogPost.css';
+import config from '../config.js';
 
 class BlogPost extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      showModal: false
+      showModal: false,
+      imageURL: ""
     };
     this.handleShowModal = this.handleShowModal.bind(this);
     this.handleCloseModal = this.handleCloseModal.bind(this);
@@ -47,8 +48,22 @@ class BlogPost extends Component {
   }
 
   async componentDidMount() {
-    this.props.blogPost.imageURL = await Storage.vault.get(this.props.blogPost.image);
-    console.log(this.props.blogPost.imageURL);
+    var AWS = require('aws-sdk');
+    var s3 = new AWS.S3({
+      credentials: {
+        accessKeyId: config.awsAccessKeyID,
+        secretAccessKey: config.awsSecretAccessKey
+      }
+    });
+    var params = {
+      Bucket: config.s3Bucket, 
+      Key: 'private/'+config.nicUsername+'/'+this.props.blogPost.image
+    };
+    s3.getSignedUrl('getObject', params, function(err, imageURL) {
+      if (!err) {
+        this.setState({imageURL});
+      }
+    }.bind(this));
   }
 
   render() {
@@ -64,7 +79,7 @@ class BlogPost extends Component {
               <img
                 width="80%"
                 height="auto"
-                src={this.props.blogPost.imageURL}
+                src={this.state.imageURL}
                 alt="Blog Post"
               />
               <br />
@@ -83,7 +98,7 @@ class BlogPost extends Component {
           <img
             width="300px"
             height="200px"
-            src={this.props.blogPost.imageURL}
+            src={this.state.imageURL}
             alt="Blog Post"
           />
           <h2>{this.props.blogPost.title}</h2>
