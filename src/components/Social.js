@@ -9,6 +9,8 @@ class Social extends Component {
     this.state = {
       photos: []
     };
+    this.scrollLeft = this.scrollLeft.bind(this);
+    this.scrollRight = this.scrollRight.bind(this);
   }
 
   getInstagramPhotos() {
@@ -24,12 +26,23 @@ class Social extends Component {
     req.send();
   }
 
+  scrollSocialFeed(amount) {
+    var scroller = document.getElementById('scroller');
+    var currentTransform = scroller.style.transform;
+    var currentScroll = 0;
+    if (currentTransform !== "") {
+      currentScroll = parseInt(currentTransform.split('(')[1].split('px)')[0]);
+    }
+    var newScroll = currentScroll + amount;
+    scroller.style.transform = `translateX(${newScroll}px)`;    
+  }
+
   scrollLeft() {
-    document.getElementById('scroller').scrollLeft -= 150;
+    this.scrollSocialFeed(150);
   }
 
   scrollRight() {
-    document.getElementById('scroller').scrollLeft += 150;
+    this.scrollSocialFeed(-150);
   }
 
   componentWillMount() {
@@ -44,10 +57,10 @@ class Social extends Component {
           <div className="arrow left-arrow" onClick={this.scrollLeft}>
             <img src={require("../social-icons/left-arrow.svg")} width="60px" alt="Left" />
           </div>
-          <div id="scroller" className="instagram-photos-container">
+          <div className="instagram-photos-container">
             {
               this.state.photos.length > 0 ?
-              <div className="instagram-photos">
+              <div id="scroller" className="instagram-photos">
                 { this.state.photos.map(photo =>
                   <Photo key={photo.id} photo={photo} />
                 ) }

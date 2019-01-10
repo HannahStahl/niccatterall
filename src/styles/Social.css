@@ -24,6 +24,7 @@
 }
 
 .instagram-photos {
+  transition: all .2s;
   width: 2160px; /* TODO make this 300ish*(number of photos) then remove count from API call*/
 }
 
