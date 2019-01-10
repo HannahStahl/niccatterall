@@ -49,7 +49,12 @@ class BlogPost extends Component {
 
   async componentDidMount() {
     var AWS = require('aws-sdk');
-    var s3 = new AWS.S3();
+    var s3 = new AWS.S3({
+      credentials: {
+        accessKeyId: process.env.REACT_APP_AWS_ACCESS_KEY_ID,
+        secretAccessKey: process.env.REACT_APP_AWS_SECRET_ACCESS_KEY
+      }
+    });
     var params = {
       Bucket: config.s3Bucket, 
       Key: 'private/'+config.nicUsername+'/'+this.props.blogPost.image
