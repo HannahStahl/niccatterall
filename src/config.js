@@ -1,8 +1,8 @@
 const dev = {
-  s3Bucket: "cms-backend-dev-attachmentsbucket-tyykclmvbv8o",
-  // will probably want to change this to Nic's once you remake his user on the new stack:
-  nicUsername: "us-east-1:af0bfaac-af4d-431b-8725-becc83c0fe4c",
-  blogPostsURL: "https://uxu37jfgnb.execute-api.us-east-1.amazonaws.com/dev/blogPostsForUser/",
+  s3Bucket: "cms-backend-dev-attachmentsbucket-qg2q7724hcy",
+  // Note for dev this is actually your username not Nic's
+  nicUsername: "us-east-1:30aa3e43-819c-4db0-895b-ffe310e9560b",
+  blogPostsURL: "https://heguftgbx3.execute-api.us-east-1.amazonaws.com/dev/blogPostsForUser/",
 };
 
 const prod = {
