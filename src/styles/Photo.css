@@ -56,14 +56,3 @@
   margin-right: 5px;
   font-size: 24px;
 }
-
-@media (max-width : 767px) {
-  .instagram-photo {
-    width: 200px;
-    height: 200px;
-  }
-
-  .instagram-photo p {
-    font-size: 20px;
-  }
-}

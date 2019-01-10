@@ -69,23 +69,3 @@
   right: 0px;
   border-right: solid white 2px;
 }
-
-@media (max-width : 767px) {
-  .instagram-photos-container {
-    height: 260px;
-  }
-
-  .instagram-photos {
-    width: 1460px;
-  }
-
-  .arrow {
-    height: 200px;
-    width: 40px;
-  }
-  
-  .arrow img {
-    margin-top: 79px;
-    width: 40px;
-  }
-}
