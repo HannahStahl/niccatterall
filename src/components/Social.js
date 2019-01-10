@@ -11,9 +11,11 @@ class Social extends Component {
       leftArrowVisible: false,
       rightArrowVisible: true
     };
+    this.handleScroll = this.handleScroll.bind(this);
     this.scrollLeft = this.scrollLeft.bind(this);
     this.scrollRight = this.scrollRight.bind(this);
     this.scrollAmount = 300;
+    this.scrollLimit = 2160;
   }
 
   getInstagramPhotos() {
@@ -27,6 +29,21 @@ class Social extends Component {
       }
     }.bind(this);
     req.send();
+  }
+
+  handleScroll() {
+    var newScroll = document.getElementById('scroller-container').scrollLeft;
+    if (newScroll > 0) {
+      this.setState({ leftArrowVisible: true });
+      var containerWidth = document.getElementById('scroller-container').offsetWidth;
+      if (newScroll >= -(containerWidth - this.scrollLimit)) {
+        this.setState({ rightArrowVisible: false });
+      } else {
+        this.setState({ rightArrowVisible: true });
+      }
+    } else {
+      this.setState({ leftArrowVisible: false });
+    }
   }
 
   getCurrentScroll() {
@@ -56,7 +73,8 @@ class Social extends Component {
 
   scrollRight() {
     var currentScroll = this.getCurrentScroll();
-    var limit = document.getElementById('scroller-container').offsetWidth - 2160;
+    var containerWidth = document.getElementById('scroller-container').offsetWidth;
+    var limit = containerWidth - this.scrollLimit;
     if (currentScroll > limit) {
       this.setState({ leftArrowVisible: true });
       var newScroll = limit;
@@ -82,7 +100,11 @@ class Social extends Component {
           <div className={"arrow left-arrow"+(this.state.leftArrowVisible ? "" : " hidden")} onClick={this.scrollLeft}>
             <img src={require("../social-icons/left-arrow.svg")} width="60px" alt="Left" />
           </div>
-          <div id="scroller-container" className="instagram-photos-container">
+          <div
+            id="scroller-container"
+            className="instagram-photos-container"
+            onScroll={this.handleScroll}
+          >
             {
               this.state.photos.length > 0 ?
               <div id="scroller" className="instagram-photos">
