@@ -82,6 +82,11 @@
 }
 
 @media (max-width : 767px) {
+  .blog-post-preview-content {
+    /* Temporary fix until you figure out why text isn't showing up */
+    height: 0px;
+  }
+
   .blog-post-preview-content * {
     font-size: 14px;
   }
