@@ -7,7 +7,9 @@ class Social extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      photos: []
+      photos: [],
+      leftArrowVisible: false,
+      rightArrowVisible: true
     };
     this.scrollLeft = this.scrollLeft.bind(this);
     this.scrollRight = this.scrollRight.bind(this);
@@ -40,7 +42,13 @@ class Social extends Component {
   scrollLeft() {
     var currentScroll = this.getCurrentScroll();
     if (currentScroll < 0) {
-      var newScroll = (currentScroll < -this.scrollAmount) ? currentScroll + this.scrollAmount : 0;
+      this.setState({ rightArrowVisible: true });
+      var newScroll = 0;
+      if (currentScroll < -this.scrollAmount) {
+        newScroll = currentScroll + this.scrollAmount;
+      } else {
+        this.setState({ leftArrowVisible: false });
+      }
       var scroller = document.getElementById('scroller');
       scroller.style.transform = `translateX(${newScroll}px)`;
     }
@@ -50,9 +58,15 @@ class Social extends Component {
     var currentScroll = this.getCurrentScroll();
     var limit = document.getElementById('scroller-container').offsetWidth - 2160;
     if (currentScroll > limit) {
-      var newScroll = (currentScroll > limit + this.scrollAmount) ? currentScroll - this.scrollAmount : limit;
+      this.setState({ leftArrowVisible: true });
+      var newScroll = limit;
+      if (currentScroll > limit + this.scrollAmount) {
+        newScroll = currentScroll - this.scrollAmount;
+      } else {
+        this.setState({ rightArrowVisible: false });
+      }
       var scroller = document.getElementById('scroller');
-      scroller.style.transform = `translateX(${newScroll}px)`; 
+      scroller.style.transform = `translateX(${newScroll}px)`;
     }
   }
 
@@ -65,7 +79,7 @@ class Social extends Component {
       <div className="social-feed">
         <h1>@cattogolf on Instagram</h1>
         <div className="instagram-container">
-          <div className="arrow left-arrow" onClick={this.scrollLeft}>
+          <div className={"arrow left-arrow"+(this.state.leftArrowVisible ? "" : " hidden")} onClick={this.scrollLeft}>
             <img src={require("../social-icons/left-arrow.svg")} width="60px" alt="Left" />
           </div>
           <div id="scroller-container" className="instagram-photos-container">
@@ -78,7 +92,7 @@ class Social extends Component {
               </div> : <div />
             }
           </div>
-          <div className="arrow right-arrow" onClick={this.scrollRight}>
+          <div className={"arrow right-arrow"+(this.state.rightArrowVisible ? "" : " hidden")} onClick={this.scrollRight}>
             <img src={require("../social-icons/right-arrow.svg")} width="60px" alt="Right" />
           </div>
         </div>
