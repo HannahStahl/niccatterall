@@ -41,7 +41,7 @@ class Footer extends Component {
             src={require("../social-icons/copyright.svg")}
             alt="Copyright"
             width="26px"
-          /> Website created by <a
+          /> 2019 - Website created by <a
             href="https://www.linkedin.com/in/hannahlstahl"
             target="_blank"
             rel="noopener noreferrer"
