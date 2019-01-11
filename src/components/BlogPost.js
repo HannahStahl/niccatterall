@@ -77,7 +77,7 @@ class BlogPost extends Component {
           <Modal.Header closeButton>
             <Modal.Title>
               <img
-                width="80%"
+                width="70%"
                 height="auto"
                 src={this.state.imageURL}
                 alt="Blog Post"
