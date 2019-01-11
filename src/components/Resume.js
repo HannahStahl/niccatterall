@@ -54,11 +54,10 @@ class Resume extends Component {
           </div>
           <p className="timeline-date date-right">2010 - 2013</p>
           <div className="timeline-container right">
-            {/* TODO Replace with Health and Fitness Australia once you get that image */}
             <ResumeCard
               eventName="Health and Fitness Australia"
               eventDetails="Co-Director and Trainer"
-              backgroundImage={require("../resume-images/brisbane-roar.png")}
+              backgroundImage={require("../resume-images/health-and-fitness-australia.png")}
               resumeCardContainerClass="right-resume-card-container"
             />
           </div>
