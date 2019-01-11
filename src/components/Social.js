@@ -14,8 +14,6 @@ class Social extends Component {
     this.handleScroll = this.handleScroll.bind(this);
     this.scrollLeft = this.scrollLeft.bind(this);
     this.scrollRight = this.scrollRight.bind(this);
-    this.scrollAmount = 300;
-    this.scrollLimit = 2160;
   }
 
   getInstagramPhotos() {
@@ -36,7 +34,7 @@ class Social extends Component {
     if (newScroll > 0) {
       this.setState({ leftArrowVisible: true });
       var containerWidth = document.getElementById('scroller-container').offsetWidth;
-      if (newScroll >= -(containerWidth - this.scrollLimit)) {
+      if (newScroll >= -(containerWidth - 2160)) {
         this.setState({ rightArrowVisible: false });
       } else {
         this.setState({ rightArrowVisible: true });
@@ -46,46 +44,22 @@ class Social extends Component {
     }
   }
 
-  getCurrentScroll() {
-    var scroller = document.getElementById('scroller');
-    var currentTransform = scroller.style.transform;
-    var currentScroll = 0;
-    if (currentTransform !== "") {
-      currentScroll = parseInt(currentTransform.split('(')[1].split('px)')[0]);
+  scrollSocialFeed(amountPerMillisecond) {
+    var i;
+    var scrollContainer = document.getElementById('scroller-container');
+    for (i = 0; i < 200; i++) {
+      setTimeout(function() {
+        scrollContainer.scrollLeft += amountPerMillisecond;
+      }, 1);
     }
-    return currentScroll;
   }
 
   scrollLeft() {
-    var currentScroll = this.getCurrentScroll();
-    if (currentScroll < 0) {
-      this.setState({ rightArrowVisible: true });
-      var newScroll = 0;
-      if (currentScroll < -this.scrollAmount) {
-        newScroll = currentScroll + this.scrollAmount;
-      } else {
-        this.setState({ leftArrowVisible: false });
-      }
-      var scroller = document.getElementById('scroller');
-      scroller.style.transform = `translateX(${newScroll}px)`;
-    }
+    this.scrollSocialFeed(-1.5);
   }
 
   scrollRight() {
-    var currentScroll = this.getCurrentScroll();
-    var containerWidth = document.getElementById('scroller-container').offsetWidth;
-    var limit = containerWidth - this.scrollLimit;
-    if (currentScroll > limit) {
-      this.setState({ leftArrowVisible: true });
-      var newScroll = limit;
-      if (currentScroll > limit + this.scrollAmount) {
-        newScroll = currentScroll - this.scrollAmount;
-      } else {
-        this.setState({ rightArrowVisible: false });
-      }
-      var scroller = document.getElementById('scroller');
-      scroller.style.transform = `translateX(${newScroll}px)`;
-    }
+    this.scrollSocialFeed(1.5);
   }
 
   componentWillMount() {
