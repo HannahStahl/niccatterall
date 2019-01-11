@@ -46,21 +46,24 @@ class Social extends Component {
   }
 
   scrollSocialFeed(amountPerMillisecond) {
-    var i;
     var scrollContainer = document.getElementById('scroller-container');
-    for (i = 0; i < 200; i++) {
-      setTimeout(function() {
+    var pixelsScrolled = 0;
+    var intervalId = setInterval(function() {
+      if (Math.abs(pixelsScrolled) >= 300) {
+        clearInterval(intervalId);
+      } else {
         scrollContainer.scrollLeft += amountPerMillisecond;
-      }, 1);
-    }
+        pixelsScrolled += amountPerMillisecond;
+      }
+    }, 1)
   }
 
   scrollLeft() {
-    this.scrollSocialFeed(-1.5);
+    this.scrollSocialFeed(-5);
   }
 
   scrollRight() {
-    this.scrollSocialFeed(1.5);
+    this.scrollSocialFeed(5);
   }
 
   componentWillMount() {
