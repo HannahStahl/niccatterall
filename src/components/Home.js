@@ -9,7 +9,7 @@ class Home extends Component {
           NIC CATTERALL
         </h1>
         <p className="mission-statement">
-        Enhancing the athletic performance of professional golfers through a scientific approach to strength and conditioning
+        Enhancing the athletic performance of professional golfers through a proven scientific approach to strength and conditioning
         </p>
       </div>
     );
