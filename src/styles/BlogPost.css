@@ -18,6 +18,7 @@
 
 .blog-post-preview img {
   border: solid white 1px;
+  object-fit: cover;
 }
 
 .blog-post-preview h2 {
