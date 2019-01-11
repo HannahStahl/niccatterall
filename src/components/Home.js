@@ -9,9 +9,7 @@ class Home extends Component {
           NIC CATTERALL
         </h1>
         <p className="mission-statement">
-          Insert mission statement here. Insert mission statement here. 
-          Insert mission statement here. Insert mission statement here. 
-          Insert mission statement here. Insert mission statement here.
+        Enhancing the athletic performance of professional golfers through a scientific approach to strength and conditioning
         </p>
       </div>
     );

@@ -29,13 +29,14 @@
 }
 
 .mission-statement {
-  font-size: 24px;
+  font-size: 28px;
   margin-top: 50px;
   width: 60%;
   min-width: 200px;
-  line-height: 1.5;
+  line-height: 1.7;
   margin-left: auto;
   margin-right: auto;
+  font-style: italic;
 }
 
 @media (max-width : 767px) {
