@@ -33,15 +33,12 @@ class Blog extends Component {
       <div>
         <h1 className="blog-header">Project Strong Bear</h1>
         <p className="blog-description">
-          Insert description here. 
-          Insert description here. 
-          Insert description here. 
-          Insert description here. 
-          Insert description here. 
-          Insert description here. 
-          Insert description here. 
-          Insert description here. 
-          Insert description here.
+          The Project Strong Bear blog was created out of remembrance for my late grandfather, 
+          a source of immense strength in my family, and late friend 
+          who exhibited the qualities of a loving bear. I was inspired
+          to no longer take time for granted and to start sharing my knowledge with others 
+          through writing. I hope this blog helps anyone interested 
+          in working on their own project of healthy living to achieve their goals.
         </p>
         {
           this.state.blogPosts.length > 0 ?
