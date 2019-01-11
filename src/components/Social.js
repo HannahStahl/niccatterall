@@ -34,7 +34,8 @@ class Social extends Component {
     if (newScroll > 0) {
       this.setState({ leftArrowVisible: true });
       var containerWidth = document.getElementById('scroller-container').offsetWidth;
-      if (newScroll >= -(containerWidth - 2160)) {
+      var limit = window.screen.width > 767 ? 2160 : 1460;
+      if (newScroll >= -(containerWidth - limit)) {
         this.setState({ rightArrowVisible: false });
       } else {
         this.setState({ rightArrowVisible: true });
