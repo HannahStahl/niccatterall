@@ -12,3 +12,14 @@
 .copyright a {
   color: white;
 }
+
+@media (max-width : 767px) {
+  .scott-hamilton-logo {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  .copyright {
+    margin-top: 20px;
+  }
+}
