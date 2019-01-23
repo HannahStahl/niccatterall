@@ -19,5 +19,16 @@
   flex-wrap: wrap;
   justify-content: center;
   max-width: 800px;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
+}
+
+.pga-line-break {
+  height: 1px;
+  background-color: white;
+  width: 750px;
+  margin-bottom: 40px;
+}
+
+.pga-subheader {
+  font-style: italic;
 }

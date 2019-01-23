@@ -8,8 +8,8 @@ class Home extends Component {
         <h1 className="home-header">
           NIC CATTERALL
         </h1>
-        <p className="mission-statement">
-        Enhancing the athletic performance of professional golfers through a proven scientific approach to strength and conditioning
+        <p className="home-subheader">
+          Strength and Conditioning Coach
         </p>
       </div>
     );

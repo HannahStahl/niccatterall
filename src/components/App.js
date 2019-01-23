@@ -5,7 +5,7 @@ import Header from './Header';
 import Footer from './Footer';
 import Home from './Home';
 import Golf from './Golf';
-import Resume from './Resume';
+import About from './About';
 import Social from './Social';
 import Blog from './Blog';
 import '../styles/App.css';
@@ -29,6 +29,13 @@ class App extends Component {
             </div>
           </Waypoint>    
         </ScrollableAnchor>
+        <ScrollableAnchor id="about">
+          <Waypoint onEnter={(data => this.setState({ activeSection: "about" }))} topOffset="50%">
+            <div className="about section">
+              <About />
+            </div>
+          </Waypoint> 
+        </ScrollableAnchor>
         <ScrollableAnchor id="golf">
           <Waypoint onEnter={(data => this.setState({ activeSection: "golf" }))} topOffset="50%">
             <div className="golf section">
@@ -36,10 +43,10 @@ class App extends Component {
             </div>
           </Waypoint> 
         </ScrollableAnchor>
-        <ScrollableAnchor id="resume">
-          <Waypoint onEnter={(data => this.setState({ activeSection: "resume" }))} topOffset="50%">
-            <div className="resume section">
-              <Resume />
+        <ScrollableAnchor id="blog">
+          <Waypoint onEnter={(data => this.setState({ activeSection: "blog" }))} topOffset="50%">
+            <div className="blog section">
+              <Blog />
             </div>
           </Waypoint> 
         </ScrollableAnchor>
@@ -47,13 +54,6 @@ class App extends Component {
           <Waypoint onEnter={(data => this.setState({ activeSection: "social" }))} topOffset="50%">
             <div className="social section">
               <Social />
-            </div>
-          </Waypoint> 
-        </ScrollableAnchor>
-        <ScrollableAnchor id="blog">
-          <Waypoint onEnter={(data => this.setState({ activeSection: "blog" }))} topOffset="50%">
-            <div className="blog section">
-              <Blog />
             </div>
           </Waypoint> 
         </ScrollableAnchor>

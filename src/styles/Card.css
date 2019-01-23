@@ -1,4 +1,6 @@
 .card-container {
+  width: 200px;
+  height: 249px;
   margin: 30px;
   transition: all .2s;
 }
@@ -13,23 +15,45 @@
 .card {
   background-repeat: no-repeat;
   background-size: cover;
+  background-color: rgba(100, 100, 100, 0.7);
+  border: solid black 1px;
+}
+
+.card-title {
+  background-color: rgba(50, 50, 50, 0.9);
+  margin-bottom: 0px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-top: solid black 1px;
+  border-bottom: solid black 1px;
+  position: absolute;
+  bottom: 0;
+  width: 198px;
 }
 
 .card-back {
   padding: 20px;
-}
-
-.card-details {
-  margin-top: 20px;
+  background-color: rgba(50, 50, 50, 0.7);
+  border: solid black 1px;
+  height: 247px;
+  display: flex;
+  align-items: center;
 }
 
 @media (max-width : 767px) {
   .card-container {
     margin: 10px;
+    width: 130px;
+    height: 160px;
+  }
+
+  .card-title {
+    width: 128px;
   }
 
   .card-back {
     padding: 10px;
+    height: 160px;
   }
 
   .card-details {

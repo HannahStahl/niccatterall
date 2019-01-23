@@ -15,10 +15,10 @@ class Header extends Component {
             <Nav>
               <NavItem
                 eventKey={1}
-                href="/#home"
-                className={this.props.activeSection === "home" ? "active" : ""}
+                href="/#about"
+                className={this.props.activeSection === "about" ? "active" : ""}
               >
-                Home
+                About
               </NavItem>
               <NavItem
                 eventKey={2}
@@ -29,10 +29,10 @@ class Header extends Component {
               </NavItem>
               <NavItem
                 eventKey={3}
-                href="/#resume"
-                className={this.props.activeSection === "resume" ? "active" : ""}
+                href="/#blog"
+                className={this.props.activeSection === "blog" ? "active" : ""}
               >
-                Resume
+                Blog
               </NavItem>
               <NavItem
                 eventKey={4}
@@ -41,19 +41,15 @@ class Header extends Component {
               >
                 Social
               </NavItem>
-              <NavItem
-                eventKey={5}
-                href="/#blog"
-                className={this.props.activeSection === "blog" ? "active" : ""}
-              >
-                Blog
-              </NavItem>
             </Nav>
           </Navbar.Collapse>
         </Navbar>
         <div className="social-icons">
           <a href="https://www.instagram.com/cattogolf/" target="_blank" rel="noopener noreferrer">
             <img src={require("../social-icons/instagram.svg")} width="28px" alt="Instagram" />
+          </a>
+          <a href="https://twitter.com/bowdo83" target="_blank" rel="noopener noreferrer">
+            <img src={require("../social-icons/twitter.svg")} width="28px" alt="Twitter" />
           </a>
           <a href="https://www.facebook.com/nic.catterall.9" target="_blank" rel="noopener noreferrer">
             <img src={require("../social-icons/facebook.svg")} width="28px" alt="Facebook" />

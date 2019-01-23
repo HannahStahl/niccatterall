@@ -18,11 +18,11 @@ class Card extends Component {
 
   render() {
     return (
-      <div className={"card-container "+this.props.cardContainerClass}>
+      <div className="card-container">
         <ReactCardFlip isFlipped={this.state.isFlipped}>
           <div
             key="front"
-            className={"card "+this.props.cardClass}
+            className="card"
             onClick={this.handleClick}
           >
             <img
@@ -30,14 +30,14 @@ class Card extends Component {
               alt="PGA headshot"
               width="100%"
             />
+            <p className="card-title">{this.props.name}</p>
           </div>
           <div
             key="back"
-            className={"card card-back "+this.props.cardBackClass}
+            className="card card-back"
             onClick={this.handleClick}
           >
-            <h2>{this.props.title.toUpperCase()}</h2>
-            <p className="card-details">{this.props.details}</p>
+            <p>{this.props.accolades}</p>
           </div>
         </ReactCardFlip>
       </div>

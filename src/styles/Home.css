@@ -15,8 +15,6 @@
   justify-content: initial;
   align-items: flex-start;
   padding-top: 10%;
-  /* Uncomment for simple parallax: */
-  /* background-attachment: fixed; */
 }
 
 .home-text {
@@ -26,25 +24,25 @@
 
 .home-header {
   font-size: 80px;
+  margin-top: 50px;
+  margin-bottom: 30px;
 }
 
-.mission-statement {
-  font-size: 28px;
-  margin-top: 50px;
-  width: 60%;
-  min-width: 200px;
-  line-height: 1.7;
+.home-subheader {
+  font-size: 36px;
+  font-weight: 100;
   margin-left: auto;
   margin-right: auto;
-  font-style: italic;
 }
 
 @media (max-width : 767px) {
   .home-header {
+    margin-top: 100px;
     font-size: 32px;
   }
 
-  .mission-statement {
-    font-size: 18px;
+  .home-subheader {
+    font-size: 24px;
+    max-width: 260px;
   }
 }
