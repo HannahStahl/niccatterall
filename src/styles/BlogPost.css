@@ -17,7 +17,7 @@
   margin-bottom: 25px;
 }
 
-.blog-post img {
+.blog-post-feature-image {
   max-height: 500px;
   object-fit: cover;
 }

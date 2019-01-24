@@ -69,6 +69,7 @@ class BlogPost extends Component {
       <div className="blog-post">
         {this.state.blogPost && <div>
           <img
+            className="blog-post-feature-image"
             width="100%"
             height="auto"
             src={this.state.imageURL}
