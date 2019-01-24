@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import config from '../config.js';
 import '../styles/BlogFull.css';
-import BlogPost from './BlogPost';
+import BlogPostPreview from './BlogPostPreview';
  
 class BlogFull extends Component {
   constructor(props) {
@@ -27,7 +27,6 @@ class BlogFull extends Component {
   }
 
   render() {
-    console.log(this.state.blogPosts);
     return (
       <div className="blog-full">
         <h1>Project Strong Bear</h1>
@@ -44,7 +43,7 @@ class BlogFull extends Component {
           this.state.blogPosts.length > 0 ?
           <div className="blog-posts">
             { this.state.blogPosts.map(blogPost =>
-              <BlogPost key={blogPost.blogPostId} blogPost={blogPost} full={true} />
+              <BlogPostPreview key={blogPost.blogPostId} blogPost={blogPost} full={true} />
             ) }
           </div> : <div />
         }

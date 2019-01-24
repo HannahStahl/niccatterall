@@ -1,29 +1,14 @@
 import React, { Component } from 'react';
-import { Modal } from 'react-bootstrap';
 import '../styles/BlogPost.css';
 import config from '../config.js';
-
+ 
 class BlogPost extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      showModal: false,
+      blogPost: null,
       imageURL: ""
     };
-    this.handleShowModal = this.handleShowModal.bind(this);
-    this.handleCloseModal = this.handleCloseModal.bind(this);
-  }
-
-  handleShowModal() {
-    this.setState({
-      showModal: true
-    });
-  }
-
-  handleCloseModal() {
-    this.setState({
-      showModal: false
-    });
   }
 
   parseDate(date) {
@@ -47,75 +32,65 @@ class BlogPost extends Component {
     return month + ' ' + day + ', ' + year;
   }
 
-  async componentDidMount() {
-    var AWS = require('aws-sdk');
-    var s3 = new AWS.S3({
-      credentials: {
-        accessKeyId: process.env.REACT_APP_AWS_ACCESS_KEY_ID,
-        secretAccessKey: process.env.REACT_APP_AWS_SECRET_ACCESS_KEY
+  getBlogPost() {
+    const blogPostId = this.props.match.params.id;
+    var req = new XMLHttpRequest();
+    req.open("GET", config.blogPostsURL+config.nicUsername, true);
+    req.onreadystatechange = function() {
+      if (req.readyState === 4 && req.status === 200) {
+        const blogPost = JSON.parse(req.responseText)[0];
+        var AWS = require('aws-sdk');
+        var s3 = new AWS.S3({
+          credentials: {
+            accessKeyId: process.env.REACT_APP_AWS_ACCESS_KEY_ID,
+            secretAccessKey: process.env.REACT_APP_AWS_SECRET_ACCESS_KEY
+          }
+        });
+        var params = {
+          Bucket: config.s3Bucket, 
+          Key: 'private/'+config.nicUsername+'/'+blogPost.image
+        };
+        s3.getSignedUrl('getObject', params, function(err, imageURL) {
+          if (!err) {
+            this.setState({ blogPost, imageURL });
+          }
+        }.bind(this));
+        // TODO change to be correct blog post rather than first blog post
+        // use blogPostId to make proper call to backend
       }
-    });
-    var params = {
-      Bucket: config.s3Bucket, 
-      Key: 'private/'+config.nicUsername+'/'+this.props.blogPost.image
-    };
-    s3.getSignedUrl('getObject', params, function(err, imageURL) {
-      if (!err) {
-        this.setState({imageURL});
-      }
-    }.bind(this));
+    }.bind(this);
+    req.send();
+  }
+
+  componentWillMount() {
+    this.getBlogPost();
   }
 
   render() {
     return (
-      <div>
-        <Modal
-          show={this.state.showModal}
-          onHide={this.handleCloseModal}
-          className="blog-post-modal"
-        >
-          <Modal.Header closeButton>
-            <Modal.Title>
-              <img
-                width="70%"
-                height="auto"
-                src={this.state.imageURL}
-                alt="Blog Post"
-              />
-              <br />
-              {this.props.blogPost.title}
-              <br />
-              <p>{this.parseDate(this.props.blogPost.publishedDate)}</p>
-            </Modal.Title>
-          </Modal.Header>
-          <Modal.Body>
-            <div
-              dangerouslySetInnerHTML={{ __html: this.props.blogPost.content }}
-            />
-          </Modal.Body>
-        </Modal>
-        <div
-          className={"blog-post-preview" + (this.props.full ? " blog-post-preview-full" : "")}
-          onClick={this.handleShowModal}
-        >
+      <div className="blog-post">
+        {this.state.blogPost && <div>
           <img
-            width="300px"
-            height="200px"
+            width="100%"
+            height="auto"
             src={this.state.imageURL}
             alt="Blog Post"
           />
-          <h2>{this.props.blogPost.title}</h2>
-          <p className={"blog-post-preview-date" + (this.props.full ? " blog-post-preview-date-full" : "")}>
-            {this.parseDate(this.props.blogPost.publishedDate)}
-          </p>
+          <h1>{this.state.blogPost.title}</h1>
+          <p className="full-blog-date">{this.parseDate(this.state.blogPost.publishedDate)}</p>
           <div
-            dangerouslySetInnerHTML={{ __html: this.props.blogPost.content }}
-            className={"blog-post-preview-content" + (this.props.full ? " blog-post-preview-content-full" : "")}
+            dangerouslySetInnerHTML={{ __html: this.state.blogPost.content }}
           />
-        </div>
+          <p className="blog-back-link">
+            <a href="/blog">
+              <img src={require("../social-icons/left-arrow.svg")} width="26px" alt="Go" />
+              Return to Project Strong Bear
+            </a>
+          </p>
+        </div>}
       </div>
     );
   }
 }
-
+ 
 export default BlogPost;

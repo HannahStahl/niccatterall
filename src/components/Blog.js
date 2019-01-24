@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import config from '../config.js';
 import '../styles/Blog.css';
-import BlogPost from './BlogPost';
+import BlogPostPreview from './BlogPostPreview';
  
 class Blog extends Component {
   constructor(props) {
@@ -38,7 +38,7 @@ class Blog extends Component {
           this.state.blogPosts.length > 0 ?
           <div className="blog-posts">
             { this.state.blogPosts.map(blogPost =>
-              <BlogPost key={blogPost.blogPostId} blogPost={blogPost} />
+              <BlogPostPreview key={blogPost.blogPostId} blogPost={blogPost} />
             ) }
           </div> : <div />
         }
