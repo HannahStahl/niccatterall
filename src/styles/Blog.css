@@ -2,16 +2,22 @@
   background-color: rgb(25, 25, 25);
 }
 
-.blog-description {
-  width: 80%;
-  max-width: 700px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 30px;
-}
-
 .blog-posts {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+}
+
+.blog-link {
+  margin-top: 40px;
+  margin-bottom: 30px;
+}
+
+.blog-link a {
+  color: white;
+  text-decoration: none;
+}
+
+.blog-link a:hover {
+  font-weight: bold;
 }

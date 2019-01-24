@@ -16,9 +16,11 @@ class Blog extends Component {
     req.open("GET", config.blogPostsURL+config.nicUsername, true);
     req.onreadystatechange = function() {
       if (req.readyState === 4 && req.status === 200) {
-        this.setState({
-          blogPosts: JSON.parse(req.responseText)
-        });
+        let blogPosts = JSON.parse(req.responseText);
+        if (blogPosts.length > 3) {
+          blogPosts = blogPosts.slice(0, 3);
+        }
+        this.setState({ blogPosts });
       }
     }.bind(this);
     req.send();
@@ -32,15 +34,6 @@ class Blog extends Component {
     return (
       <div>
         <h1 className="blog-header">Project Strong Bear</h1>
-        <p className="blog-description">
-          The Project Strong Bear blog was created out of remembrance 
-          for my late grandfather, a source of immense strength 
-          in my family, and late friend who exhibited the qualities 
-          of a loving bear. Their sudden passing, along with my 
-          grandfather's passion for writing, motivated me to seize 
-          the day and start sharing my knowledge about healthy living 
-          with others.
-        </p>
         {
           this.state.blogPosts.length > 0 ?
           <div className="blog-posts">
@@ -49,6 +42,11 @@ class Blog extends Component {
             ) }
           </div> : <div />
         }
+        <p className="blog-link">
+          <a href="/blog" target="_blank" rel="noopener noreferrer">See all blog posts 
+            <img src={require("../social-icons/right-arrow.svg")} width="26px" alt="Go" />
+          </a>
+        </p>
       </div>
     );
   }

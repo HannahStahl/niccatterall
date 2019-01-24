@@ -11,6 +11,11 @@
 
 .copyright a {
   color: white;
+  text-decoration: none;
+}
+
+.copyright a:hover {
+  font-weight: bold;
 }
 
 @media (max-width : 767px) {

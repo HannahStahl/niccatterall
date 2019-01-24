@@ -94,7 +94,10 @@ class BlogPost extends Component {
             />
           </Modal.Body>
         </Modal>
-        <div className="blog-post-preview" onClick={this.handleShowModal}>
+        <div
+          className={"blog-post-preview" + (this.props.full ? " blog-post-preview-full" : "")}
+          onClick={this.handleShowModal}
+        >
           <img
             width="300px"
             height="200px"
@@ -102,12 +105,12 @@ class BlogPost extends Component {
             alt="Blog Post"
           />
           <h2>{this.props.blogPost.title}</h2>
-          <p className="blog-post-preview-date">
+          <p className={"blog-post-preview-date" + (this.props.full ? " blog-post-preview-date-full" : "")}>
             {this.parseDate(this.props.blogPost.publishedDate)}
           </p>
           <div
             dangerouslySetInnerHTML={{ __html: this.props.blogPost.content }}
-            className="blog-post-preview-content"
+            className={"blog-post-preview-content" + (this.props.full ? " blog-post-preview-content-full" : "")}
           />
         </div>
       </div>

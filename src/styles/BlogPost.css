@@ -27,11 +27,19 @@
   margin-bottom: 5px;
 }
 
+.blog-post-preview-full img {
+  border: solid black 1px;
+}
+
 .blog-post-preview-date {
   color: rgb(200, 200, 200);
   font-size: 16px;
   font-style: italic;
   margin-bottom: 12px;
+}
+
+.blog-post-preview-date-full {
+  color: black;
 }
 
 .blog-post-preview-content {
@@ -41,6 +49,10 @@
   color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
+}
+
+.blog-post-preview-content-full {
+  background-image: linear-gradient( black, white);
 }
 
 .blog-post-preview-content * {

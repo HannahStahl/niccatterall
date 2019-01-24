@@ -12,9 +12,9 @@
   ), url("../background-images/home.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  justify-content: initial;
-  align-items: flex-start;
-  padding-top: 10%;
+  justify-content: initial !important;
+  align-items: flex-start !important;
+  padding-top: 10% !important;
 }
 
 .home-text {

@@ -10,7 +10,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   justify-content: center;
-  align-items: flex-end;
+  align-items: flex-end !important;
   background-attachment: fixed;
 }
 
@@ -27,8 +27,16 @@
   background-color: white;
   width: 750px;
   margin-bottom: 40px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .pga-subheader {
   font-style: italic;
+}
+
+@media (max-width : 767px) {
+  .pga-line-break {
+    width: 300px;
+  }
 }

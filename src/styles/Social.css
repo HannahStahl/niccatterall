@@ -1,7 +1,7 @@
 .social {
   background-color: black;
-  min-height: 600px;
-  padding-bottom: 0px;
+  min-height: 600px !important;
+  padding-bottom: 0px !important;
 }
 
 .social-feed {
@@ -62,19 +62,19 @@
   opacity: 0.8;
 }
 
-.left-arrow {
+.left-carat {
   left: 0px;
   border-left: solid white 2px;
 }
 
-.right-arrow {
+.right-carat {
   right: 0px;
   border-right: solid white 2px;
 }
 
 @media (max-width : 767px) {
   .social {
-    min-height: 400px;
+    min-height: 400px !important;
   }
 
   .instagram-container {
