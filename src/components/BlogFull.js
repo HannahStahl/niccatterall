@@ -13,7 +13,7 @@ class BlogFull extends Component {
 
   getBlogPosts() {
     var req = new XMLHttpRequest();
-    req.open("GET", config.blogPostsURL+config.nicUsername, true);
+    req.open("GET", config.blogPostsURL+"blogPostsForUser/"+config.nicUsername, true);
     req.onreadystatechange = function() {
       if (req.readyState === 4 && req.status === 200) {
         this.setState({ blogPosts: JSON.parse(req.responseText) });

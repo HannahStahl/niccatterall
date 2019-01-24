@@ -2,13 +2,13 @@ const dev = {
   s3Bucket: "cms-backend-dev-attachmentsbucket-qg2q7724hcy",
   // Note for dev this is actually your username not Nic's
   nicUsername: "us-east-1:30aa3e43-819c-4db0-895b-ffe310e9560b",
-  blogPostsURL: "https://heguftgbx3.execute-api.us-east-1.amazonaws.com/dev/blogPostsForUser/",
+  blogPostsURL: "https://heguftgbx3.execute-api.us-east-1.amazonaws.com/dev/",
 };
 
 const prod = {
   s3Bucket: "cms-backend-prod-attachmentsbucket-gskfdn3cqx2t",
   nicUsername: "us-east-1:c0655045-37e1-479e-afc7-da0e3d063a6e",
-  blogPostsURL: "https://me3t2amdo0.execute-api.us-east-1.amazonaws.com/prod/blogPostsForUser/"
+  blogPostsURL: "https://me3t2amdo0.execute-api.us-east-1.amazonaws.com/prod/"
 };
 
 // Default to dev if not set

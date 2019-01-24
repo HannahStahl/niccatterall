@@ -35,10 +35,10 @@ class BlogPost extends Component {
   getBlogPost() {
     const blogPostId = this.props.match.params.id;
     var req = new XMLHttpRequest();
-    req.open("GET", config.blogPostsURL+config.nicUsername, true);
+    req.open("GET", config.blogPostsURL+"blogPostForUser/"+config.nicUsername+"/"+blogPostId, true);
     req.onreadystatechange = function() {
       if (req.readyState === 4 && req.status === 200) {
-        const blogPost = JSON.parse(req.responseText)[0];
+        const blogPost = JSON.parse(req.responseText);
         var AWS = require('aws-sdk');
         var s3 = new AWS.S3({
           credentials: {
@@ -55,8 +55,6 @@ class BlogPost extends Component {
             this.setState({ blogPost, imageURL });
           }
         }.bind(this));
-        // TODO change to be correct blog post rather than first blog post
-        // use blogPostId to make proper call to backend
       }
     }.bind(this);
     req.send();
