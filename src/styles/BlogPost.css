@@ -36,3 +36,10 @@
 .blog-back-link a:hover {
   font-weight: bold;
 }
+
+@media (max-width: 767px) {
+  .blog-post-content img {
+    max-width: 250px;
+    height: auto;
+  }
+}

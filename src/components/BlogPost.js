@@ -78,6 +78,7 @@ class BlogPost extends Component {
           <h1>{this.state.blogPost.title}</h1>
           <p className="full-blog-date">{this.parseDate(this.state.blogPost.publishedDate)}</p>
           <div
+            className="blog-post-content"
             dangerouslySetInnerHTML={{ __html: this.state.blogPost.content }}
           />
           <p className="blog-back-link">
