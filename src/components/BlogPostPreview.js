@@ -53,7 +53,12 @@ class BlogPostPreview extends Component {
   render() {
     return (
       <div>
-        <a className="link-to-blog-post" href={"/blog/"+this.props.blogPost.blogPostId}>
+        <a
+          className="link-to-blog-post"
+          href={"/blog/"+this.props.blogPost.blogPostId}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <div
             className={"blog-post-preview" + (this.props.full ? " blog-post-preview-full" : "")}
           >
