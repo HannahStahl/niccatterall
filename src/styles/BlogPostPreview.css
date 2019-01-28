@@ -17,7 +17,7 @@
 }
 
 .blog-post-preview img {
-  border: solid white 1px;
+  border: solid black 1px;
   object-fit: cover;
 }
 
