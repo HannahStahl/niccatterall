@@ -37,9 +37,9 @@ class Golf extends Component {
         <h1>PGA Client Showcase</h1>
         <div className="players">
           <Card
-            name="Luke List"
-            accolades="Ranked 64th in the PGA tour"
-            backgroundImage={require("../player-headshots/luke-list.png")}
+            name="Dylan Frittelli"
+            accolades="Ranked 83rd in the PGA tour"
+            backgroundImage={require("../player-headshots/dylan-frittelli.png")}
           />
           <Card
             name="Chris Kirk"
@@ -47,9 +47,9 @@ class Golf extends Component {
             backgroundImage={require("../player-headshots/chris-kirk.png")}
           />
           <Card
-            name="Dylan Frittelli"
-            accolades="Ranked 83rd in the PGA tour"
-            backgroundImage={require("../player-headshots/dylan-frittelli.png")}
+            name="Luke List"
+            accolades="Ranked 64th in the PGA tour"
+            backgroundImage={require("../player-headshots/luke-list.png")}
           />
           <Card
             name="Tom LoveLady"
@@ -68,9 +68,9 @@ class Golf extends Component {
         </p>
         <div className={this.state.pastClientsVisible ? "players" : "hidden players"}>
           <Card
-            name="Patrick Cantlay"
-            accolades="Ranked 17th in the PGA tour"
-            backgroundImage={require("../player-headshots/patrick-cantlay.png")}
+            name="Zac Blair"
+            accolades="Ranked 8th in Web.com tour"
+            backgroundImage={require("../player-headshots/zac-blair.png")}
           />
           <Card
             name="Steven Bowditch"
@@ -78,14 +78,9 @@ class Golf extends Component {
             backgroundImage={require("../player-headshots/steven-bowditch.png")}
           />
           <Card
-            name="Zac Blair"
-            accolades="Ranked 8th in Web.com tour"
-            backgroundImage={require("../player-headshots/zac-blair.png")}
-          />
-          <Card
-            name="Boo Weekley"
-            accolades="Earned three 2nd place finishes"
-            backgroundImage={require("../player-headshots/boo-weekley.png")}
+            name="Patrick Cantlay"
+            accolades="Ranked 17th in the PGA tour"
+            backgroundImage={require("../player-headshots/patrick-cantlay.png")}
           />
           <Card
             name="Ben Martin"
@@ -96,6 +91,11 @@ class Golf extends Component {
             name="Cameron Percy"
             accolades="Ranked 16th in Web.com tour"
             backgroundImage={require("../player-headshots/cameron-percy.png")}
+          />
+          <Card
+            name="Boo Weekley"
+            accolades="Earned three 2nd place finishes"
+            backgroundImage={require("../player-headshots/boo-weekley.png")}
           />
         </div>
       </div>
