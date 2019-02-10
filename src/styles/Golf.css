@@ -22,17 +22,9 @@
   margin-bottom: 20px;
 }
 
-.pga-line-break {
-  height: 1px;
-  background-color: white;
-  width: 750px;
-  margin-bottom: 40px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.pga-subheader {
-  font-style: italic;
+.show-past-clients:hover {
+  cursor: pointer;
+  font-weight: bold;
 }
 
 @media (max-width : 767px) {

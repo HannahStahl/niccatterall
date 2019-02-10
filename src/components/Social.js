@@ -76,7 +76,7 @@ class Social extends Component {
         <h1>@cattogolf on Instagram</h1>
         <div className="instagram-container">
           <div className={"arrow left-carat"+(this.state.leftArrowVisible ? "" : " hidden")} onClick={this.scrollLeft}>
-            <img src={require("../social-icons/left-carat.svg")} width="60px" alt="Left" />
+            <img src={require("../misc-icons/left-carat.svg")} width="60px" alt="Left" />
           </div>
           <div
             id="scroller-container"
@@ -93,7 +93,7 @@ class Social extends Component {
             }
           </div>
           <div className={"arrow right-carat"+(this.state.rightArrowVisible ? "" : " hidden")} onClick={this.scrollRight}>
-            <img src={require("../social-icons/right-carat.svg")} width="60px" alt="Right" />
+            <img src={require("../misc-icons/right-carat.svg")} width="60px" alt="Right" />
           </div>
         </div>
       </div>

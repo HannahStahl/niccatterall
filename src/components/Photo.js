@@ -35,12 +35,12 @@ class Photo extends Component {
         onMouseLeave={this.toggleHover}
       >
         <div className="likes">
-          <img src={require("../social-icons/heart.svg")} width="28px" alt="Likes" />
+          <img src={require("../misc-icons/heart.svg")} width="28px" alt="Likes" />
           <p>{this.props.photo.likes.count}</p>
         </div>
         <div className="comments">
           <p>{this.props.photo.comments.count}</p>
-          <img src={require("../social-icons/speech-bubble.svg")} width="28px" alt="Comments" />
+          <img src={require("../misc-icons/speech-bubble.svg")} width="28px" alt="Comments" />
         </div>
       </a>
     );

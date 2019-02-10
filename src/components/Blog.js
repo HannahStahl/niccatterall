@@ -44,7 +44,7 @@ class Blog extends Component {
         }
         <p className="blog-link">
           <a href="/blog" target="_blank" rel="noopener noreferrer">See all blog posts 
-            <img src={require("../social-icons/right-arrow.svg")} width="26px" alt="Go" />
+            <img src={require("../misc-icons/right-arrow.svg")} width="26px" alt="Go" />
           </a>
         </p>
       </div>

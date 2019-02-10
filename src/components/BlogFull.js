@@ -49,7 +49,7 @@ class BlogFull extends Component {
         }
         <p className="blog-link-to-main">
           <a href="/">
-            <img src={require("../social-icons/left-arrow.svg")} width="26px" alt="Go" />
+            <img src={require("../misc-icons/left-arrow.svg")} width="26px" alt="Go" />
              Return to main site
           </a>
         </p>

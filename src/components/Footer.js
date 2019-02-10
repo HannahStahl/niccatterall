@@ -38,7 +38,7 @@ class Footer extends Component {
         </div>
         <p className="copyright">
           <img
-            src={require("../social-icons/copyright.svg")}
+            src={require("../misc-icons/copyright.svg")}
             alt="Copyright"
             width="26px"
           /> 2019 - Website created by <a

@@ -3,11 +3,38 @@ import '../styles/Golf.css';
 import Card from './Card';
  
 class Golf extends Component {
+  constructor(props) {
+    super(props);
+    this.downCarat = require("../misc-icons/down-carat.svg");
+    this.upCarat = require("../misc-icons/up-carat.svg");
+    this.state = {
+      pastClientsVisible: false,
+      pastClientsText: "Show past clients ",
+      pastClientsCarat: this.downCarat
+    };
+    this.togglePastClients = this.togglePastClients.bind(this);
+  }
+
+  togglePastClients() {
+    if (this.state.pastClientsVisible) {
+      this.setState({
+        pastClientsVisible: false,
+        pastClientsText: "Show past clients ",
+        pastClientsCarat: this.downCarat
+      });
+    } else {
+      this.setState({
+        pastClientsVisible: true,
+        pastClientsText: "Hide past clients ",
+        pastClientsCarat: this.upCarat
+      });
+    }
+  }
+
   render() {
     return (
       <div>
-        <h1>PGA Player Showcase</h1>
-        <h2 className="pga-subheader">Currently Working With Nic</h2>
+        <h1>PGA Client Showcase</h1>
         <div className="players">
           <Card
             name="Luke List"
@@ -35,9 +62,11 @@ class Golf extends Component {
             backgroundImage={require("../player-headshots/da-points.png")}
           />
         </div>
-        <div className="pga-line-break" />
-        <h2 className="pga-subheader">Previously Worked With Nic</h2>
-        <div className="players">
+        <p className="show-past-clients" onClick={this.togglePastClients}>
+          {this.state.pastClientsText}
+          <img src={this.state.pastClientsCarat} width="20px" alt="Arrow" />
+        </p>
+        <div className={this.state.pastClientsVisible ? "players" : "hidden players"}>
           <Card
             name="Patrick Cantlay"
             accolades="Ranked 17th in the PGA tour"
