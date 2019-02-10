@@ -39,22 +39,10 @@ class BlogPost extends Component {
     req.onreadystatechange = function() {
       if (req.readyState === 4 && req.status === 200) {
         const blogPost = JSON.parse(req.responseText);
-        var AWS = require('aws-sdk');
-        var s3 = new AWS.S3({
-          credentials: {
-            accessKeyId: process.env.REACT_APP_AWS_ACCESS_KEY_ID,
-            secretAccessKey: process.env.REACT_APP_AWS_SECRET_ACCESS_KEY
-          }
+        this.setState({
+          blogPost,
+          imageURL: config.cloudFrontURL + blogPost.image
         });
-        var params = {
-          Bucket: config.s3Bucket, 
-          Key: 'private/'+config.nicUsername+'/'+blogPost.image
-        };
-        s3.getSignedUrl('getObject', params, function(err, imageURL) {
-          if (!err) {
-            this.setState({ blogPost, imageURL });
-          }
-        }.bind(this));
       }
     }.bind(this);
     req.send();
