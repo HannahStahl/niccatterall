@@ -16,17 +16,19 @@ class Social extends Component {
     this.scrollRight = this.scrollRight.bind(this);
   }
 
+  setInstagramPhotoState = (contents) => {
+    this.setState({
+      photos: contents.data
+    });
+  }
+
   getInstagramPhotos() {
-    var req = new XMLHttpRequest();
-    req.open("GET", config.getNicInstagramURL, true);
-    req.onreadystatechange = function () {
-      if (req.readyState === 4 && req.status === 200) {
-        this.setState({
-          photos: JSON.parse(req.responseText).data
-        });
-      }
-    }.bind(this);
-    req.send();
+    const proxyurl = "https://cors-anywhere.herokuapp.com/";
+    const url = config.getNicInstagramURL;
+    fetch(proxyurl + url)
+      .then(response => response.text())
+      .then(contents => this.setInstagramPhotoState(JSON.parse(contents)))
+      .catch(() => console.log("Can’t access " + url + " response. Blocked by browser?"))
   }
 
   handleScroll() {
