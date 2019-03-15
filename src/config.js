@@ -8,9 +8,9 @@ const dev = {
 
 const prod = {
   s3Bucket: "cms-backend-prod-attachmentsbucket-1kgllxxybytns",
-  nicUsername: "us-east-1:7ce58545-f327-4387-86b7-262292d52d82",
+  nicUsername: "us-east-1:d908b4a1-a463-457f-a5ee-36c7be08db55",
   blogPostsURL: "https://oxy3euke2k.execute-api.us-east-1.amazonaws.com/prod/",
-  cloudFrontURL: "https://d81qfb1ehnc7e.cloudfront.net/"
+  cloudFrontURL: "https://d1fl3q441qbwnx.cloudfront.net/"
 };
 
 // Default to dev if not set
