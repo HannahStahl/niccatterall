@@ -7,10 +7,10 @@ const dev = {
 };
 
 const prod = {
-  s3Bucket: "cms-backend-prod-attachmentsbucket-gskfdn3cqx2t",
-  nicUsername: "us-east-1:c0655045-37e1-479e-afc7-da0e3d063a6e",
-  blogPostsURL: "https://me3t2amdo0.execute-api.us-east-1.amazonaws.com/prod/",
-  cloudFrontURL: "https://d284k0k8nv2x8f.cloudfront.net/"
+  s3Bucket: "cms-backend-prod-attachmentsbucket-1kgllxxybytns",
+  nicUsername: "us-east-1:7ce58545-f327-4387-86b7-262292d52d82",
+  blogPostsURL: "https://oxy3euke2k.execute-api.us-east-1.amazonaws.com/prod/",
+  cloudFrontURL: "https://d81qfb1ehnc7e.cloudfront.net/"
 };
 
 // Default to dev if not set
