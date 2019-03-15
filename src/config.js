@@ -1,9 +1,9 @@
 const dev = {
-  s3Bucket: "cms-backend-dev-attachmentsbucket-qg2q7724hcy",
+  s3Bucket: "cms-backend-dev-attachmentsbucket-mg9wvqe6tx0h",
   // Note for dev this is actually your username not Nic's
-  nicUsername: "us-east-1:30aa3e43-819c-4db0-895b-ffe310e9560b",
-  blogPostsURL: "https://heguftgbx3.execute-api.us-east-1.amazonaws.com/dev/",
-  cloudFrontURL: "https://d3fy6r09yakf45.cloudfront.net/"
+  nicUsername: "us-east-1:581c7f6a-41c6-4715-a5f3-d396e3af7e0c",
+  blogPostsURL: "https://8erdut5qvk.execute-api.us-east-1.amazonaws.com/dev/",
+  cloudFrontURL: "https://d1nwz5yvxuozj1.cloudfront.net/"
 };
 
 const prod = {
