@@ -61,7 +61,7 @@ class BlogPost extends Component {
             width="100%"
             height="auto"
             src={this.state.imageURL}
-            alt="Blog Post"
+            alt="Nic Blog"
           />
           <h1>{this.state.blogPost.title}</h1>
           <p className="full-blog-date">{this.parseDate(this.state.blogPost.publishedDate)}</p>
