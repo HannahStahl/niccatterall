@@ -17,9 +17,11 @@ class Social extends Component {
   }
 
   setInstagramPhotoState = (contents) => {
-    this.setState({
-      photos: contents.data
-    });
+    if (contents.data) {
+      this.setState({
+        photos: contents.data
+      });
+    }
   }
 
   getInstagramPhotos() {
