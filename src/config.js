@@ -19,6 +19,6 @@ const config = process.env.REACT_APP_STAGE === 'prod'
   : dev;
 
 export default {
-  getNicInstagramURL: "https://api.instagram.com/v1/users/3041604645/media/recent?access_token=3041604645.3ae8b40.e9bee353b7c54e1080abcab4fdbaf46c&count=7",
+  getNicInstagramURL: "https://api.instagram.com/v1/users/3041604645/media/recent?access_token=3041604645.3ae8b40.7f5d186c0c7d4dbd8a2d7f17a772a8ca&count=7",
   ...config
 };
