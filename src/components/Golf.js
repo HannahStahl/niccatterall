@@ -38,7 +38,7 @@ class Golf extends Component {
         <div className="players">
           <Card
             name="Dylan Frittelli"
-            accolades="Ranked 83rd in the PGA tour"
+            accolades="Ranked 97th in the PGA tour"
             backgroundImage={require("../player-headshots/dylan-frittelli.png")}
           />
           <Card
@@ -47,19 +47,24 @@ class Golf extends Component {
             backgroundImage={require("../player-headshots/chris-kirk.png")}
           />
           <Card
-            name="Luke List"
-            accolades="Ranked 64th in the PGA tour"
-            backgroundImage={require("../player-headshots/luke-list.png")}
+            name="Kyoung-Hoon Lee"
+            accolades="Earned two top 10 finishes"
+            backgroundImage={require("../player-headshots/kh-lee.png")}
           />
           <Card
-            name="Tom LoveLady"
-            accolades="Tied for 2nd at 2018 Barbasol Championship"
-            backgroundImage={require("../player-headshots/tom-lovelady.png")}
+            name="Luke List"
+            accolades="Ranked 88th in the PGA tour"
+            backgroundImage={require("../player-headshots/luke-list.png")}
           />
           <Card
             name="D.A. Points"
             accolades="Earned 19 top 10 finishes"
             backgroundImage={require("../player-headshots/da-points.png")}
+          />
+          <Card
+            name="Kyle Stanley"
+            accolades="Ranked 65th in the PGA tour"
+            backgroundImage={require("../player-headshots/kyle-stanley.png")}
           />
         </div>
         <p className="show-past-clients" onClick={this.togglePastClients}>
@@ -79,8 +84,13 @@ class Golf extends Component {
           />
           <Card
             name="Patrick Cantlay"
-            accolades="Ranked 17th in the PGA tour"
+            accolades="Ranked 7th in the PGA tour"
             backgroundImage={require("../player-headshots/patrick-cantlay.png")}
+          />
+          <Card
+            name="Tom LoveLady"
+            accolades="Tied for 2nd at 2018 Barbasol Championship"
+            backgroundImage={require("../player-headshots/tom-lovelady.png")}
           />
           <Card
             name="Ben Martin"
