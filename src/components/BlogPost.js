@@ -41,7 +41,7 @@ class BlogPost extends Component {
         const blogPost = JSON.parse(req.responseText);
         this.setState({
           blogPost,
-          imageURL: config.cloudFrontURL + blogPost.image
+          imageURL: config.blogCloudFrontURL + blogPost.image
         });
       }
     }.bind(this);
