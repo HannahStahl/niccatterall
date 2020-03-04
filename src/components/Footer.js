@@ -37,16 +37,12 @@ class Footer extends Component {
           />
         </div>
         <p className="copyright">
-          <img
-            src={require("../misc-icons/copyright.svg")}
-            alt="Copyright"
-            width="26px"
-          /> 2019 - Website created by <a
-            href="https://www.linkedin.com/in/hannahlstahl"
+          © 2019 - <a
+            href="https://www.websitesbyhannah.com"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Hannah Stahl
+            Websites by Hannah
           </a>
         </p>
       </div>

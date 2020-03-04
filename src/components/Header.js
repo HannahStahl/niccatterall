@@ -33,13 +33,6 @@ class Header extends Component {
               >
                 Blog
               </NavItem>
-              <NavItem
-                eventKey={4}
-                href="/#social"
-                className={this.props.activeSection === "social" ? "active" : ""}
-              >
-                Social
-              </NavItem>
             </Nav>
           </Navbar.Collapse>
         </Navbar>

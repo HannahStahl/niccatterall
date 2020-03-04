@@ -6,7 +6,6 @@ import Footer from './Footer';
 import Home from './Home';
 import Golf from './Golf';
 import About from './About';
-import Social from './Social';
 import Blog from './Blog';
 import '../styles/Main.css';
  
@@ -47,13 +46,6 @@ class Main extends Component {
           <Waypoint onEnter={(data => this.setState({ activeSection: "blog" }))} topOffset="50%">
             <div className="blog section">
               <Blog />
-            </div>
-          </Waypoint> 
-        </ScrollableAnchor>
-        <ScrollableAnchor id="social">
-          <Waypoint onEnter={(data => this.setState({ activeSection: "social" }))} topOffset="50%">
-            <div className="social section">
-              <Social />
             </div>
           </Waypoint> 
         </ScrollableAnchor>
