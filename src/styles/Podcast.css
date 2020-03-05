@@ -1,0 +1,29 @@
+.podcast {
+  background-color: #526131;
+}
+
+.podcast-episodes {
+  width: 100%;
+}
+
+.podcast-episode {
+  width: 100%;
+  max-width: 850px;
+  height: 200px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.podcast-link {
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.podcast-link a {
+  color: white;
+  text-decoration: none;
+}
+
+.podcast-link a:hover {
+  font-weight: bold;
+}
