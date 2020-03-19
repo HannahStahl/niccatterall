@@ -37,7 +37,7 @@ class Footer extends Component {
           />
         </div>
         <p className="copyright">
-          © 2019 - <a
+          © {(new Date()).getFullYear()} - <a
             href="https://www.websitesbyhannah.com"
             target="_blank"
             rel="noopener noreferrer"
