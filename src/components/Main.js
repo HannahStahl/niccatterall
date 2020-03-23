@@ -43,17 +43,17 @@ class Main extends Component {
             </div>
           </Waypoint> 
         </ScrollableAnchor>
-        <ScrollableAnchor id="blog">
-          <Waypoint onEnter={(data => this.setState({ activeSection: "blog" }))} topOffset="50%">
-            <div className="blog section">
-              <Blog />
-            </div>
-          </Waypoint> 
-        </ScrollableAnchor>
         <ScrollableAnchor id="podcast">
           <Waypoint onEnter={(data => this.setState({ activeSection: "podcast" }))} topOffset="50%">
             <div className="podcast section">
               <Podcast />
+            </div>
+          </Waypoint> 
+        </ScrollableAnchor>
+        <ScrollableAnchor id="blog">
+          <Waypoint onEnter={(data => this.setState({ activeSection: "blog" }))} topOffset="50%">
+            <div className="blog section">
+              <Blog />
             </div>
           </Waypoint> 
         </ScrollableAnchor>
