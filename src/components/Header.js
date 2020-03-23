@@ -28,17 +28,17 @@ class Header extends Component {
               </NavItem>
               <NavItem
                 eventKey={3}
-                href="/#blog"
-                className={this.props.activeSection === "blog" ? "active" : ""}
-              >
-                Blog
-              </NavItem>
-              <NavItem
-                eventKey={4}
                 href="/#podcast"
                 className={this.props.activeSection === "podcast" ? "active" : ""}
               >
                 Podcast
+              </NavItem>
+              <NavItem
+                eventKey={4}
+                href="/#blog"
+                className={this.props.activeSection === "blog" ? "active" : ""}
+              >
+                Blog
               </NavItem>
             </Nav>
           </Navbar.Collapse>
