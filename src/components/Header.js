@@ -28,10 +28,10 @@ class Header extends Component {
               </NavItem>
               <NavItem
                 eventKey={3}
-                href="/#blog"
-                className={this.props.activeSection === "blog" ? "active" : ""}
+                href="/#programs"
+                className={this.props.activeSection === "programs" ? "active" : ""}
               >
-                Blog
+                Programs
               </NavItem>
               <NavItem
                 eventKey={4}
@@ -39,6 +39,13 @@ class Header extends Component {
                 className={this.props.activeSection === "podcast" ? "active" : ""}
               >
                 Podcast
+              </NavItem>
+              <NavItem
+                eventKey={5}
+                href="/#blog"
+                className={this.props.activeSection === "blog" ? "active" : ""}
+              >
+                Blog
               </NavItem>
             </Nav>
           </Navbar.Collapse>
