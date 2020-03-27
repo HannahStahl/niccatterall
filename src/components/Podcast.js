@@ -1,13 +1,28 @@
 import React, { Component } from 'react';
 import '../styles/Podcast.css';
+import config from '../config';
 
 class Podcast extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { episodeURLs: [] }
+  }
+
+  componentDidMount() {
+    fetch(config.podcastURL, {
+      method: 'GET',
+      headers: { 'Content-Type': 'application/json' },
+    }).then((response) => response.json()).then((episodes) => {
+      const episodeURLs = episodes.map((episode) => {
+        const url = episode.audio_url.split('.mp3')[0];
+        return `${url}?client_source=small_player&amp;iframe=true&amp;referrer=${url}.js?player=small`;
+      });
+      this.setState({ episodeURLs });
+    });
+  }
+
   render() {
-    const episodeURLs = [
-      "https://www.buzzsprout.com/256006/2600131-episode-3-talking-sports-medicine-with-dr-kevin-sprouse-take-charge-of-your-performance?client_source=small_player&amp;iframe=true&map;referrer=https://www.buzzsprout.com/256006/2600131-episode-3-talking-sports-medicine-with-dr-kevin-sprouse-take-charge-of-your-performance.js?player=small",
-      "https://www.buzzsprout.com/256006/1046767-nic-catterall-explores-life-on-tour-with-adam-kerley-physical-therapist-athletic-trainer-and-national-director-of-exos-physical-therapy-and-sports-performance?client_source=small_player&amp;iframe=true&amp;referrer=https://www.buzzsprout.com/256006/1046767-nic-catterall-explores-life-on-tour-with-adam-kerley-physical-therapist-athletic-trainer-and-national-director-of-exos-physical-therapy-and-sports-performance.js?player=small",
-      "https://www.buzzsprout.com/256006/951972-welcome-to-the-tour-golf-podcast-with-nic-catterall-trailer?client_source=small_player&amp;iframe=true&amp;referrer=https://www.buzzsprout.com/256006/951972-welcome-to-the-tour-golf-podcast-with-nic-catterall-trailer.js?player=small",
-    ];
+    const { episodeURLs } = this.state;
     return (
       <div className="podcast-episodes">
         <h1>Tour Golf Podcast</h1>
