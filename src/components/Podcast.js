@@ -13,7 +13,7 @@ class Podcast extends Component {
       method: 'GET',
       headers: { 'Content-Type': 'application/json' },
     }).then((response) => response.json()).then((episodes) => {
-      const episodeURLs = episodes.map((episode) => {
+      const episodeURLs = episodes.slice(0, 3).map((episode) => {
         const url = episode.audio_url.split('.mp3')[0];
         return `${url}?client_source=small_player&amp;iframe=true&amp;referrer=${url}.js?player=small`;
       });

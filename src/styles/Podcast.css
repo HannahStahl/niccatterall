@@ -1,7 +1,7 @@
 .podcast {
   background: linear-gradient(
-    rgba(0, 0, 0, 0.6),
-    rgba(0, 0, 0, 0.6)
+    rgba(0, 0, 0, 0.3),
+    rgba(0, 0, 0, 0.3)
   ), url("http://d2vff3mk7ylu21.cloudfront.net/podcast5.jpg");
   background-repeat: no-repeat;
   background-size: cover;
