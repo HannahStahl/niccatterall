@@ -1,5 +1,11 @@
 .programs {
-  background-color: rgb(25, 25, 25);
+  background: linear-gradient(
+    rgba(0, 0, 0, 0.8),
+    rgba(0, 0, 0, 0.8)
+  ), url("http://d2vff3mk7ylu21.cloudfront.net/programs.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 .training-programs-container {
@@ -10,15 +16,15 @@
 }
 
 .training-programs-description {
-  max-width: 400px;
+  max-width: 325px;
   text-align: left;
   margin-left: 40px;
   margin-right: 40px;
-  line-height: 1.5;
+  line-height: 1.7;
 }
 
 .training-programs-list {
-  max-width: 550px;
+  max-width: 600px;
   margin-left: 40px;
   margin-right: 40px;
 }

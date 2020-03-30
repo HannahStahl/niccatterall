@@ -28,13 +28,10 @@ class Programs extends Component {
         <h1>Training Programs</h1>
         <div className="training-programs-container">
           <p className="training-programs-description">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
-            nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in 
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-            Excepteur sint occaecat cupidatat non proident, 
-            sunt in culpa qui officia deserunt mollit anim id est laborum.
+            Nic offers training programs designed for all levels of competency and exercise experience, 
+            which can be performed right at home. Advanced sport-specific coaching is available 
+            and personalized with monitoring and communication options at various levels. 
+            For more information and purchasing options, click on the links provided here.
           </p>
           <div className="training-programs-list">
             {programs.map(program => (
