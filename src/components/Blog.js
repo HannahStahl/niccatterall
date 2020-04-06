@@ -11,15 +11,21 @@ class Blog extends Component {
     };
   }
 
+  sortBlogPosts(a, b) {
+    if (a.datePublished > b.datePublished) return -1;
+    if (b.datePublished > a.datePublished) return 1;
+    return 0;
+  }
+
   getBlogPosts() {
     Promise.all([
-      fetch(`${config.blogPostsURL}publishedItems/${config.nicUsername}`).then(res => res.json()),
+      fetch(`${config.blogPostsURL}publishedItemsOfSpecifiedType/${config.nicUsername}/${config.blogConfigId}`).then(res => res.json()),
       fetch(`${config.blogPostsURL}itemsToPhotos/${config.nicUsername}`).then(res => res.json()),
       fetch(`${config.blogPostsURL}photos/${config.nicUsername}`).then(res => res.json())
     ]).then((results) => {
       let [blogPosts, photosToBlogPosts, photos] = results;
       if (blogPosts.length > 3) blogPosts = blogPosts.slice(0, 3);
-      blogPosts = blogPosts.map(blogPost => {
+      blogPosts = blogPosts.sort(this.sortBlogPosts).map(blogPost => {
         const { photoId } = photosToBlogPosts.find(imageToBlogPost => imageToBlogPost.itemId === blogPost.itemId);
         const { photoName } = photos.find(image => image.photoId === photoId);
         return ({ ...blogPost, image: photoName });
