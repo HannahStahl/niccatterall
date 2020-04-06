@@ -19,9 +19,9 @@ class BlogFull extends Component {
 
   getBlogPosts() {
     Promise.all([
-      fetch(`${config.blogPostsURL}publishedItemsOfSpecifiedType/${config.nicUsername}/${config.blogConfigId}`).then(res => res.json()),
-      fetch(`${config.blogPostsURL}itemsToPhotos/${config.nicUsername}`).then(res => res.json()),
-      fetch(`${config.blogPostsURL}photos/${config.nicUsername}`).then(res => res.json())
+      fetch(`${config.apiURL}publishedItemsOfSpecifiedType/${config.nicUsername}/${config.blogConfigId}`).then(res => res.json()),
+      fetch(`${config.apiURL}itemsToPhotos/${config.nicUsername}`).then(res => res.json()),
+      fetch(`${config.apiURL}photos/${config.nicUsername}`).then(res => res.json())
     ]).then((results) => {
       let [blogPosts, photosToBlogPosts, photos] = results;
       blogPosts = blogPosts.sort(this.sortBlogPosts).map(blogPost => {

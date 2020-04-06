@@ -19,14 +19,14 @@ class BlogPost extends Component {
   getBlogPost() {
     const blogPostId = this.props.match.params.id;
     Promise.all([
-      fetch(`${config.blogPostsURL}item/${config.nicUsername}/${blogPostId}`).then(res => res.json()),
-      fetch(`${config.blogPostsURL}itemsToPhotos/${config.nicUsername}`).then(res => res.json()),
-      fetch(`${config.blogPostsURL}photos/${config.nicUsername}`).then(res => res.json())
+      fetch(`${config.apiURL}item/${config.nicUsername}/${blogPostId}`).then(res => res.json()),
+      fetch(`${config.apiURL}itemsToPhotos/${config.nicUsername}`).then(res => res.json()),
+      fetch(`${config.apiURL}photos/${config.nicUsername}`).then(res => res.json())
     ]).then((results) => {
       let [blogPost, photosToBlogPosts, photos] = results;
       const { photoId } = photosToBlogPosts.find(imageToBlogPost => imageToBlogPost.itemId === blogPost.itemId);
       const { photoName } = photos.find(image => image.photoId === photoId);
-      this.setState({ blogPost, imageURL: `${config.blogCloudFrontURL}${photoName}` });
+      this.setState({ blogPost, imageURL: `${config.cloudFrontURL}${photoName}` });
     });
   }
 

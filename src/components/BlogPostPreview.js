@@ -17,7 +17,7 @@ class BlogPostPreview extends Component {
 
   componentWillMount() {
     this.setState({
-      imageURL: config.blogCloudFrontURL + this.props.blogPost.image
+      imageURL: config.cloudFrontURL + this.props.blogPost.image
     });
   }
 
