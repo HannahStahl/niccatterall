@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import moment from 'moment';
 import '../styles/BlogPost.css';
 import config from '../config.js';
  
@@ -12,40 +13,21 @@ class BlogPost extends Component {
   }
 
   parseDate(date) {
-    var dateMinusTime = date.split(',')[0];
-    var [monthNumber, day, year]  = dateMinusTime.split('/');
-    var months = [
-      'January',
-      'February',
-      'March',
-      'April',
-      'May',
-      'June',
-      'July',
-      'August',
-      'September',
-      'October',
-      'November',
-      'December'
-    ];
-    var month = months[monthNumber-1];
-    return month + ' ' + day + ', ' + year;
+    return moment(date).format('MMMM D, YYYY');
   }
 
   getBlogPost() {
     const blogPostId = this.props.match.params.id;
-    var req = new XMLHttpRequest();
-    req.open("GET", config.blogPostsURL+"blogPostForUser/"+config.nicUsername+"/"+blogPostId, true);
-    req.onreadystatechange = function() {
-      if (req.readyState === 4 && req.status === 200) {
-        const blogPost = JSON.parse(req.responseText);
-        this.setState({
-          blogPost,
-          imageURL: config.blogCloudFrontURL + blogPost.image
-        });
-      }
-    }.bind(this);
-    req.send();
+    Promise.all([
+      fetch(`${config.blogPostsURL}item/${config.nicUsername}/${blogPostId}`).then(res => res.json()),
+      fetch(`${config.blogPostsURL}itemsToPhotos/${config.nicUsername}`).then(res => res.json()),
+      fetch(`${config.blogPostsURL}photos/${config.nicUsername}`).then(res => res.json())
+    ]).then((results) => {
+      let [blogPost, photosToBlogPosts, photos] = results;
+      const { photoId } = photosToBlogPosts.find(imageToBlogPost => imageToBlogPost.itemId === blogPost.itemId);
+      const { photoName } = photos.find(image => image.photoId === photoId);
+      this.setState({ blogPost, imageURL: `${config.blogCloudFrontURL}${photoName}` });
+    });
   }
 
   componentWillMount() {
@@ -63,11 +45,11 @@ class BlogPost extends Component {
             src={this.state.imageURL}
             alt="Nic Blog"
           />
-          <h1>{this.state.blogPost.title}</h1>
-          <p className="full-blog-date">{this.parseDate(this.state.blogPost.publishedDate)}</p>
+          <h1>{this.state.blogPost.itemName}</h1>
+          <p className="full-blog-date">{this.parseDate(this.state.blogPost.datePublished)}</p>
           <div
             className="blog-post-content"
-            dangerouslySetInnerHTML={{ __html: this.state.blogPost.content }}
+            dangerouslySetInnerHTML={{ __html: this.state.blogPost.itemHtml }}
           />
           <p className="blog-back-link">
             <a href="/blog">

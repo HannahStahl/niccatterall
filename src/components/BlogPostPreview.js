@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import moment from 'moment';
 import '../styles/BlogPostPreview.css';
 import config from '../config.js';
 
@@ -11,24 +12,7 @@ class BlogPostPreview extends Component {
   }
 
   parseDate(date) {
-    var dateMinusTime = date.split(',')[0];
-    var [monthNumber, day, year]  = dateMinusTime.split('/');
-    var months = [
-      'January',
-      'February',
-      'March',
-      'April',
-      'May',
-      'June',
-      'July',
-      'August',
-      'September',
-      'October',
-      'November',
-      'December'
-    ];
-    var month = months[monthNumber-1];
-    return month + ' ' + day + ', ' + year;
+    return moment(date).format('MMMM D, YYYY');
   }
 
   componentWillMount() {
@@ -42,7 +26,7 @@ class BlogPostPreview extends Component {
       <div>
         <a
           className="link-to-blog-post"
-          href={"/blog/"+this.props.blogPost.blogPostId}
+          href={"/blog/"+this.props.blogPost.itemId}
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -55,12 +39,12 @@ class BlogPostPreview extends Component {
               src={this.state.imageURL}
               alt="Blog Post"
             />
-            <h2>{this.props.blogPost.title}</h2>
+            <h2>{this.props.blogPost.itemName}</h2>
             <p className={"blog-post-preview-date" + (this.props.full ? " blog-post-preview-date-full" : "")}>
-              {this.parseDate(this.props.blogPost.publishedDate)}
+              {this.parseDate(this.props.blogPost.datePublished)}
             </p>
             <div
-              dangerouslySetInnerHTML={{ __html: this.props.blogPost.content }}
+              dangerouslySetInnerHTML={{ __html: this.props.blogPost.itemHtml }}
               className={"blog-post-preview-content" + (this.props.full ? " blog-post-preview-content-full" : "")}
             />
           </div>

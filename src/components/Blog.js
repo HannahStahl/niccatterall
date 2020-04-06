@@ -12,18 +12,20 @@ class Blog extends Component {
   }
 
   getBlogPosts() {
-    var req = new XMLHttpRequest();
-    req.open("GET", config.blogPostsURL+"blogPostsForUser/"+config.nicUsername, true);
-    req.onreadystatechange = function() {
-      if (req.readyState === 4 && req.status === 200) {
-        let blogPosts = JSON.parse(req.responseText);
-        if (blogPosts.length > 3) {
-          blogPosts = blogPosts.slice(0, 3);
-        }
-        this.setState({ blogPosts });
-      }
-    }.bind(this);
-    req.send();
+    Promise.all([
+      fetch(`${config.blogPostsURL}publishedItems/${config.nicUsername}`).then(res => res.json()),
+      fetch(`${config.blogPostsURL}itemsToPhotos/${config.nicUsername}`).then(res => res.json()),
+      fetch(`${config.blogPostsURL}photos/${config.nicUsername}`).then(res => res.json())
+    ]).then((results) => {
+      let [blogPosts, photosToBlogPosts, photos] = results;
+      if (blogPosts.length > 3) blogPosts = blogPosts.slice(0, 3);
+      blogPosts = blogPosts.map(blogPost => {
+        const { photoId } = photosToBlogPosts.find(imageToBlogPost => imageToBlogPost.itemId === blogPost.itemId);
+        const { photoName } = photos.find(image => image.photoId === photoId);
+        return ({ ...blogPost, image: photoName });
+      });
+      this.setState({ blogPosts });
+    });
   }
 
   componentWillMount() {
@@ -38,7 +40,7 @@ class Blog extends Component {
           this.state.blogPosts.length > 0 ?
           <div className="blog-posts">
             { this.state.blogPosts.map(blogPost =>
-              <BlogPostPreview key={blogPost.blogPostId} blogPost={blogPost} />
+              <BlogPostPreview key={blogPost.itemId} blogPost={blogPost} />
             ) }
           </div> : <div />
         }

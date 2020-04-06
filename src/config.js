@@ -1,18 +1,18 @@
 const dev = {
   s3Bucket: "cms-backend-dev-attachmentsbucket-mg9wvqe6tx0h",
   // Note for dev this is actually your username not Nic's
-  nicUsername: "us-east-1:581c7f6a-41c6-4715-a5f3-d396e3af7e0c",
+  nicUsername: "us-east-1:0c9864e8-7db2-45fc-9c5a-ed2c11e2d9cf",
   podcastURL: "https://mtmhzl2lje.execute-api.us-east-1.amazonaws.com/dev/episodes/get",
-  blogPostsURL: "https://8erdut5qvk.execute-api.us-east-1.amazonaws.com/dev/",
-  blogCloudFrontURL: "https://d1nwz5yvxuozj1.cloudfront.net/"
+  blogPostsURL: "https://dlnum6f7kj.execute-api.us-east-1.amazonaws.com/dev/",
+  blogCloudFrontBaseURL: "https://d1ljva6zkf6zjh.cloudfront.net"
 };
 
 const prod = {
   s3Bucket: "cms-backend-prod-attachmentsbucket-1kgllxxybytns",
-  nicUsername: "us-east-1:d908b4a1-a463-457f-a5ee-36c7be08db55",
+  nicUsername: "us-east-1:eb9f731c-e691-4bc2-a74c-ba3e0cfd4f6b",
   podcastURL: "https://btsrfouie1.execute-api.us-east-1.amazonaws.com/prod/episodes/get",
-  blogPostsURL: "https://oxy3euke2k.execute-api.us-east-1.amazonaws.com/prod/",
-  blogCloudFrontURL: "https://d1fl3q441qbwnx.cloudfront.net/"
+  blogPostsURL: "https://lbe32id9hg.execute-api.us-east-1.amazonaws.com/prod/",
+  blogCloudFrontBaseURL: "https://d1esxin5o90ebg.cloudfront.net"
 };
 
 // Default to dev if not set
@@ -21,6 +21,7 @@ const config = process.env.REACT_APP_STAGE === 'prod'
   : dev;
 
 export default {
+  blogCloudFrontURL: `${config.blogCloudFrontBaseURL}/${config.nicUsername}/`,
   getNicInstagramURL: "https://api.instagram.com/v1/users/3041604645/media/recent?access_token=3041604645.3ae8b40.7f5d186c0c7d4dbd8a2d7f17a772a8ca&count=7",
   ...config
 };
