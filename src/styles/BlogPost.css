@@ -37,6 +37,10 @@
   font-weight: bold;
 }
 
+.blog-post-content * {
+  font-family: Roboto, sans-serif !important;
+}
+
 @media (max-width: 767px) {
   .blog-post-content img {
     max-width: 250px;
