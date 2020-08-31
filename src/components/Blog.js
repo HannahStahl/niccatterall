@@ -24,12 +24,12 @@ class Blog extends Component {
       fetch(`${config.apiURL}photos/${config.nicUsername}`).then(res => res.json())
     ]).then((results) => {
       let [blogPosts, photosToBlogPosts, photos] = results;
-      if (blogPosts.length > 3) blogPosts = blogPosts.slice(0, 3);
       blogPosts = blogPosts.sort(this.sortBlogPosts).map(blogPost => {
         const { photoId } = photosToBlogPosts.find(imageToBlogPost => imageToBlogPost.itemId === blogPost.itemId);
         const { photoName } = photos.find(image => image.photoId === photoId);
         return ({ ...blogPost, image: photoName });
       });
+      if (blogPosts.length > 3) blogPosts = blogPosts.slice(0, 3);
       this.setState({ blogPosts });
     });
   }
