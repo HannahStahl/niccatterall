@@ -54,7 +54,7 @@ class BlogPost extends Component {
           <p className="blog-back-link">
             <a href="/blog">
               <img src={require("../misc-icons/left-arrow.svg")} width="26px" alt="Go" />
-              Return to Project Strong Bear
+              Return to Blog Articles
             </a>
           </p>
         </div>}

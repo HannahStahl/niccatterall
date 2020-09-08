@@ -40,9 +40,9 @@ class BlogFull extends Component {
   render() {
     return (
       <div className="blog-full">
-        <h1>Project Strong Bear</h1>
+        <h1>Blog Articles</h1>
         <p className="blog-description">
-          I created the Project Strong Bear blog out of remembrance 
+          I created this blog out of remembrance 
           for my late grandfather, a source of immense strength 
           in my family, and late friend who exhibited the qualities 
           of a loving bear. Their sudden passing, along with my 

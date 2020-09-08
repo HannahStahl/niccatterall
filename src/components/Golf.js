@@ -47,11 +47,6 @@ class Golf extends Component {
             backgroundImage={require("../player-headshots/chris-kirk.png")}
           />
           <Card
-            name="Kyoung-Hoon Lee"
-            accolades="Earned two top 10 finishes"
-            backgroundImage={require("../player-headshots/kh-lee.png")}
-          />
-          <Card
             name="Luke List"
             accolades="Ranked 88th in the PGA tour"
             backgroundImage={require("../player-headshots/luke-list.png")}
@@ -62,9 +57,9 @@ class Golf extends Component {
             backgroundImage={require("../player-headshots/da-points.png")}
           />
           <Card
-            name="Kyle Stanley"
-            accolades="Ranked 65th in the PGA tour"
-            backgroundImage={require("../player-headshots/kyle-stanley.png")}
+            name="Cameron Smith"
+            accolades="Ranked 49th in the PGA tour"
+            backgroundImage={require("../player-headshots/cameron-smith.png")}
           />
         </div>
         <p className="show-past-clients" onClick={this.togglePastClients}>
@@ -88,6 +83,11 @@ class Golf extends Component {
             backgroundImage={require("../player-headshots/patrick-cantlay.png")}
           />
           <Card
+            name="Kyoung-Hoon Lee"
+            accolades="Earned two top 10 finishes"
+            backgroundImage={require("../player-headshots/kh-lee.png")}
+          />
+          <Card
             name="Tom LoveLady"
             accolades="Tied for 2nd at 2018 Barbasol Championship"
             backgroundImage={require("../player-headshots/tom-lovelady.png")}
@@ -101,6 +101,11 @@ class Golf extends Component {
             name="Cameron Percy"
             accolades="Ranked 16th in Web.com tour"
             backgroundImage={require("../player-headshots/cameron-percy.png")}
+          />
+          <Card
+            name="Kyle Stanley"
+            accolades="Ranked 65th in the PGA tour"
+            backgroundImage={require("../player-headshots/kyle-stanley.png")}
           />
           <Card
             name="Boo Weekley"

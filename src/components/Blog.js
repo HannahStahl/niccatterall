@@ -41,7 +41,7 @@ class Blog extends Component {
   render() {
     return (
       <div>
-        <h1 className="blog-header">Project Strong Bear</h1>
+        <h1 className="blog-header">Blog Articles</h1>
         {
           this.state.blogPosts.length > 0 ?
           <div className="blog-posts">
@@ -51,7 +51,7 @@ class Blog extends Component {
           </div> : <div />
         }
         <p className="blog-link">
-          <a href="/blog" target="_blank" rel="noopener noreferrer">See all blog posts 
+          <a href="/blog" target="_blank" rel="noopener noreferrer">See all blog articles 
             <img src={require("../misc-icons/right-arrow.svg")} width="26px" alt="Go" />
           </a>
         </p>

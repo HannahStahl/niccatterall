@@ -28,7 +28,7 @@ class Card extends Component {
             <img
               src={this.props.backgroundImage}
               alt="PGA headshot"
-              width="100%"
+              className="card-photo"
             />
             <p className="card-title">{this.props.name}</p>
           </div>

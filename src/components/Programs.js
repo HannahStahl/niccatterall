@@ -29,7 +29,7 @@ class Programs extends Component {
     return (
       <div className="training-programs">
         <h1>Training Programs</h1>
-        <div className="training-programs-container">
+        <div className={`training-programs-container${programs.length <= 1 ? ' full-width' : ''}`}>
           <div className="training-programs-description">
             <p>
               Nic offers training programs designed for all levels of competency and exercise experience, 

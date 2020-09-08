@@ -24,13 +24,13 @@ class Footer extends Component {
           />
           <Affiliate
             name="Chuck Cook"
-            url="http://www.chuckcookgolf.com"
+            url="https://www.chuckcookgolf.com"
             logo={require("../affiliate-logos/chuckcookgolf.png")}
             width="150px"
           />
           <Affiliate
             name="Scott Hamilton"
-            url="http://www.scotthamiltongolf.com"
+            url="https://www.scotthamiltongolf.com"
             logo={require("../affiliate-logos/scotthamilton.png")}
             imageClassName="scott-hamilton-logo"
             width="130px"

@@ -1,6 +1,6 @@
 .card-container {
   width: 200px;
-  height: 249px;
+  height: 200px;
   margin: 30px;
   transition: all .2s;
 }
@@ -17,6 +17,19 @@
   background-size: cover;
   background-color: rgba(100, 100, 100, 0.7);
   border: solid black 1px;
+  position: relative;
+  width: 200px;
+  height: 200px;
+}
+
+.card-photo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 198px;
+  object-fit: cover;
+  object-position: top;
 }
 
 .card-title {
@@ -24,18 +37,17 @@
   margin-bottom: 0px;
   padding-top: 10px;
   padding-bottom: 10px;
-  border-top: solid black 1px;
-  border-bottom: solid black 1px;
+  border: solid black 1px;
   position: absolute;
   bottom: 0;
-  width: 198px;
+  width: 200px;
 }
 
 .card-back {
   padding: 20px;
   background-color: rgba(50, 50, 50, 0.7);
   border: solid black 1px;
-  height: 247px;
+  height: 200px;
   display: flex;
   align-items: center;
 }
@@ -44,19 +56,27 @@
   .card-container {
     margin: 10px;
     width: 130px;
-    height: 160px;
+    height: 130px;
+  }
+
+  .card {
+    width: 130px;
+    height: 130px;
+  }
+
+  .card-photo {
+    width: 130px;
+    height: 128px;
   }
 
   .card-title {
-    width: 128px;
+    width: 130px;
+    padding-top: 5px;
+    padding-bottom: 5px;
   }
 
   .card-back {
     padding: 10px;
-    height: 160px;
-  }
-
-  .card-details {
-    margin-top: 8px;
+    height: 130px;
   }
 }
